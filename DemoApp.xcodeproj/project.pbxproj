@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		7D507A582020F80200C96E48 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A572020F80200C96E48 /* Constants.swift */; };
+		7D507A5E2020FB3700C96E48 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A5D2020FB3700C96E48 /* OnboardingViewController.swift */; };
+		7D507A602020FBAE00C96E48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A5F2020FBAE00C96E48 /* MainViewController.swift */; };
+		7D507A622020FBC400C96E48 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A612020FBC400C96E48 /* ListViewController.swift */; };
+		7D507A642020FBD700C96E48 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A632020FBD700C96E48 /* DetailViewController.swift */; };
+		7D507A662020FC1600C96E48 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A652020FC1600C96E48 /* OnboardingView.swift */; };
+		7D507A692020FD1000C96E48 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A682020FD1000C96E48 /* OnboardingPresenter.swift */; };
+		7D507A6B2020FD2300C96E48 /* OnboardingViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A6A2020FD2300C96E48 /* OnboardingViewContract.swift */; };
+		7D507A6D2020FEA300C96E48 /* MainViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A6C2020FEA300C96E48 /* MainViewContract.swift */; };
+		7D507A6F2020FEB700C96E48 /* ListViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A6E2020FEB700C96E48 /* ListViewContract.swift */; };
+		7D507A752021044900C96E48 /* DetailViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A742021044900C96E48 /* DetailViewContract.swift */; };
+		7D507A772021063300C96E48 /* OnboardingModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A762021063300C96E48 /* OnboardingModuleFactory.swift */; };
+		7D507A79202106B600C96E48 /* MainModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A78202106B600C96E48 /* MainModuleFactory.swift */; };
+		7D507A7B202106D300C96E48 /* ListModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A7A202106D300C96E48 /* ListModuleFactory.swift */; };
+		7D507A7D202106F200C96E48 /* DetailModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A7C202106F200C96E48 /* DetailModuleFactory.swift */; };
 		7DA12D0D20201785000E1758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D0C20201785000E1758 /* AppDelegate.swift */; };
 		7DA12D0F20201785000E1758 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D0E20201785000E1758 /* RootViewController.swift */; };
 		7DA12D1420201785000E1758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA12D1320201785000E1758 /* Assets.xcassets */; };
@@ -35,6 +49,20 @@
 
 /* Begin PBXFileReference section */
 		7D507A572020F80200C96E48 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7D507A5D2020FB3700C96E48 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		7D507A5F2020FBAE00C96E48 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7D507A612020FBC400C96E48 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		7D507A632020FBD700C96E48 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7D507A652020FC1600C96E48 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		7D507A682020FD1000C96E48 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
+		7D507A6A2020FD2300C96E48 /* OnboardingViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewContract.swift; sourceTree = "<group>"; };
+		7D507A6C2020FEA300C96E48 /* MainViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewContract.swift; sourceTree = "<group>"; };
+		7D507A6E2020FEB700C96E48 /* ListViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewContract.swift; sourceTree = "<group>"; };
+		7D507A742021044900C96E48 /* DetailViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewContract.swift; sourceTree = "<group>"; };
+		7D507A762021063300C96E48 /* OnboardingModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModuleFactory.swift; sourceTree = "<group>"; };
+		7D507A78202106B600C96E48 /* MainModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleFactory.swift; sourceTree = "<group>"; };
+		7D507A7A202106D300C96E48 /* ListModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModuleFactory.swift; sourceTree = "<group>"; };
+		7D507A7C202106F200C96E48 /* DetailModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModuleFactory.swift; sourceTree = "<group>"; };
 		7DA12D0920201785000E1758 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA12D0C20201785000E1758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DA12D0E20201785000E1758 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +105,10 @@
 		7D507A532020F01800C96E48 /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7D507A5B2020FAAE00C96E48 /* detail */,
+				7D507A5A2020FAA200C96E48 /* list */,
+				7D507A592020FA8A00C96E48 /* main */,
+				7D507A5C2020FAE200C96E48 /* onboarding */,
 				7D507A562020F0FD00C96E48 /* root */,
 				7DA12D0C20201785000E1758 /* AppDelegate.swift */,
 			);
@@ -103,6 +135,48 @@
 				7DA12D0E20201785000E1758 /* RootViewController.swift */,
 			);
 			path = root;
+			sourceTree = "<group>";
+		};
+		7D507A592020FA8A00C96E48 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				7D507A6C2020FEA300C96E48 /* MainViewContract.swift */,
+				7D507A5F2020FBAE00C96E48 /* MainViewController.swift */,
+				7D507A78202106B600C96E48 /* MainModuleFactory.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		7D507A5A2020FAA200C96E48 /* list */ = {
+			isa = PBXGroup;
+			children = (
+				7D507A6E2020FEB700C96E48 /* ListViewContract.swift */,
+				7D507A612020FBC400C96E48 /* ListViewController.swift */,
+				7D507A7A202106D300C96E48 /* ListModuleFactory.swift */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		7D507A5B2020FAAE00C96E48 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				7D507A632020FBD700C96E48 /* DetailViewController.swift */,
+				7D507A742021044900C96E48 /* DetailViewContract.swift */,
+				7D507A7C202106F200C96E48 /* DetailModuleFactory.swift */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
+		7D507A5C2020FAE200C96E48 /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				7D507A6A2020FD2300C96E48 /* OnboardingViewContract.swift */,
+				7D507A682020FD1000C96E48 /* OnboardingPresenter.swift */,
+				7D507A652020FC1600C96E48 /* OnboardingView.swift */,
+				7D507A5D2020FB3700C96E48 /* OnboardingViewController.swift */,
+				7D507A762021063300C96E48 /* OnboardingModuleFactory.swift */,
+			);
+			path = onboarding;
 			sourceTree = "<group>";
 		};
 		7DA12D0020201785000E1758 = {
@@ -291,8 +365,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DA12D0F20201785000E1758 /* RootViewController.swift in Sources */,
+				7D507A772021063300C96E48 /* OnboardingModuleFactory.swift in Sources */,
 				7DA12D0D20201785000E1758 /* AppDelegate.swift in Sources */,
+				7D507A622020FBC400C96E48 /* ListViewController.swift in Sources */,
+				7D507A7D202106F200C96E48 /* DetailModuleFactory.swift in Sources */,
+				7D507A6F2020FEB700C96E48 /* ListViewContract.swift in Sources */,
+				7D507A6B2020FD2300C96E48 /* OnboardingViewContract.swift in Sources */,
+				7D507A692020FD1000C96E48 /* OnboardingPresenter.swift in Sources */,
 				7D507A582020F80200C96E48 /* Constants.swift in Sources */,
+				7D507A6D2020FEA300C96E48 /* MainViewContract.swift in Sources */,
+				7D507A79202106B600C96E48 /* MainModuleFactory.swift in Sources */,
+				7D507A752021044900C96E48 /* DetailViewContract.swift in Sources */,
+				7D507A5E2020FB3700C96E48 /* OnboardingViewController.swift in Sources */,
+				7D507A7B202106D300C96E48 /* ListModuleFactory.swift in Sources */,
+				7D507A662020FC1600C96E48 /* OnboardingView.swift in Sources */,
+				7D507A602020FBAE00C96E48 /* MainViewController.swift in Sources */,
+				7D507A642020FBD700C96E48 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
