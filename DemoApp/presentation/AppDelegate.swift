@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -9,7 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        self.window?.rootViewController = RootViewController()
+        self.window?.rootViewController = RootModuleFactory.buildModule()
         
         self.window?.backgroundColor = UIColor.white
         self.window?.makeKeyAndVisible()

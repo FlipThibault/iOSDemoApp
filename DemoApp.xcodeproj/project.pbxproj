@@ -28,6 +28,13 @@
 		7DA12D1720201785000E1758 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DA12D1520201785000E1758 /* LaunchScreen.storyboard */; };
 		7DA12D2220201786000E1758 /* DemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D2120201786000E1758 /* DemoAppTests.swift */; };
 		7DA12D2D20201786000E1758 /* DemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D2C20201786000E1758 /* DemoAppUITests.swift */; };
+		7DE4C69920221AAD00BB30EA /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C69820221AAD00BB30EA /* OnboardingRouter.swift */; };
+		7DE4C69C20221B2400BB30EA /* OnboardingRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C69B20221B2400BB30EA /* OnboardingRouterContract.swift */; };
+		7DE4C6A1202221C400BB30EA /* RootModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C6A0202221C400BB30EA /* RootModuleFactory.swift */; };
+		7DE4C6A42022239B00BB30EA /* RootViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C6A32022239B00BB30EA /* RootViewContract.swift */; };
+		7DE4C6A6202223CF00BB30EA /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C6A5202223CF00BB30EA /* RootPresenter.swift */; };
+		7DE4C6A8202228DD00BB30EA /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C6A7202228DD00BB30EA /* RootRouter.swift */; };
+		7DE4C6AA2022294700BB30EA /* RootRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C6A92022294700BB30EA /* RootRouterContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +82,13 @@
 		7DA12D2820201786000E1758 /* DemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA12D2C20201786000E1758 /* DemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppUITests.swift; sourceTree = "<group>"; };
 		7DA12D2E20201786000E1758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DE4C69820221AAD00BB30EA /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
+		7DE4C69B20221B2400BB30EA /* OnboardingRouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouterContract.swift; sourceTree = "<group>"; };
+		7DE4C6A0202221C400BB30EA /* RootModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModuleFactory.swift; sourceTree = "<group>"; };
+		7DE4C6A32022239B00BB30EA /* RootViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewContract.swift; sourceTree = "<group>"; };
+		7DE4C6A5202223CF00BB30EA /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
+		7DE4C6A7202228DD00BB30EA /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		7DE4C6A92022294700BB30EA /* RootRouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +146,11 @@
 		7D507A562020F0FD00C96E48 /* root */ = {
 			isa = PBXGroup;
 			children = (
+				7DE4C6A22022238600BB30EA /* contracts */,
 				7DA12D0E20201785000E1758 /* RootViewController.swift */,
+				7DE4C6A0202221C400BB30EA /* RootModuleFactory.swift */,
+				7DE4C6A5202223CF00BB30EA /* RootPresenter.swift */,
+				7DE4C6A7202228DD00BB30EA /* RootRouter.swift */,
 			);
 			path = root;
 			sourceTree = "<group>";
@@ -140,7 +158,7 @@
 		7D507A592020FA8A00C96E48 /* main */ = {
 			isa = PBXGroup;
 			children = (
-				7D507A6C2020FEA300C96E48 /* MainViewContract.swift */,
+				7DE4C69D20221B8F00BB30EA /* contracts */,
 				7D507A5F2020FBAE00C96E48 /* MainViewController.swift */,
 				7D507A78202106B600C96E48 /* MainModuleFactory.swift */,
 			);
@@ -150,7 +168,7 @@
 		7D507A5A2020FAA200C96E48 /* list */ = {
 			isa = PBXGroup;
 			children = (
-				7D507A6E2020FEB700C96E48 /* ListViewContract.swift */,
+				7DE4C69E20221B9900BB30EA /* contracts */,
 				7D507A612020FBC400C96E48 /* ListViewController.swift */,
 				7D507A7A202106D300C96E48 /* ListModuleFactory.swift */,
 			);
@@ -160,8 +178,8 @@
 		7D507A5B2020FAAE00C96E48 /* detail */ = {
 			isa = PBXGroup;
 			children = (
+				7DE4C69F20221BA500BB30EA /* contracts */,
 				7D507A632020FBD700C96E48 /* DetailViewController.swift */,
-				7D507A742021044900C96E48 /* DetailViewContract.swift */,
 				7D507A7C202106F200C96E48 /* DetailModuleFactory.swift */,
 			);
 			path = detail;
@@ -170,11 +188,12 @@
 		7D507A5C2020FAE200C96E48 /* onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				7D507A6A2020FD2300C96E48 /* OnboardingViewContract.swift */,
+				7DE4C69A20221B0500BB30EA /* contracts */,
 				7D507A682020FD1000C96E48 /* OnboardingPresenter.swift */,
 				7D507A652020FC1600C96E48 /* OnboardingView.swift */,
 				7D507A5D2020FB3700C96E48 /* OnboardingViewController.swift */,
 				7D507A762021063300C96E48 /* OnboardingModuleFactory.swift */,
+				7DE4C69820221AAD00BB30EA /* OnboardingRouter.swift */,
 			);
 			path = onboarding;
 			sourceTree = "<group>";
@@ -229,6 +248,48 @@
 				7DA12D2E20201786000E1758 /* Info.plist */,
 			);
 			path = DemoAppUITests;
+			sourceTree = "<group>";
+		};
+		7DE4C69A20221B0500BB30EA /* contracts */ = {
+			isa = PBXGroup;
+			children = (
+				7D507A6A2020FD2300C96E48 /* OnboardingViewContract.swift */,
+				7DE4C69B20221B2400BB30EA /* OnboardingRouterContract.swift */,
+			);
+			path = contracts;
+			sourceTree = "<group>";
+		};
+		7DE4C69D20221B8F00BB30EA /* contracts */ = {
+			isa = PBXGroup;
+			children = (
+				7D507A6C2020FEA300C96E48 /* MainViewContract.swift */,
+			);
+			path = contracts;
+			sourceTree = "<group>";
+		};
+		7DE4C69E20221B9900BB30EA /* contracts */ = {
+			isa = PBXGroup;
+			children = (
+				7D507A6E2020FEB700C96E48 /* ListViewContract.swift */,
+			);
+			path = contracts;
+			sourceTree = "<group>";
+		};
+		7DE4C69F20221BA500BB30EA /* contracts */ = {
+			isa = PBXGroup;
+			children = (
+				7D507A742021044900C96E48 /* DetailViewContract.swift */,
+			);
+			path = contracts;
+			sourceTree = "<group>";
+		};
+		7DE4C6A22022238600BB30EA /* contracts */ = {
+			isa = PBXGroup;
+			children = (
+				7DE4C6A32022239B00BB30EA /* RootViewContract.swift */,
+				7DE4C6A92022294700BB30EA /* RootRouterContract.swift */,
+			);
+			path = contracts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,21 +426,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DA12D0F20201785000E1758 /* RootViewController.swift in Sources */,
+				7DE4C69920221AAD00BB30EA /* OnboardingRouter.swift in Sources */,
 				7D507A772021063300C96E48 /* OnboardingModuleFactory.swift in Sources */,
 				7DA12D0D20201785000E1758 /* AppDelegate.swift in Sources */,
+				7DE4C6A1202221C400BB30EA /* RootModuleFactory.swift in Sources */,
+				7DE4C6A6202223CF00BB30EA /* RootPresenter.swift in Sources */,
 				7D507A622020FBC400C96E48 /* ListViewController.swift in Sources */,
 				7D507A7D202106F200C96E48 /* DetailModuleFactory.swift in Sources */,
 				7D507A6F2020FEB700C96E48 /* ListViewContract.swift in Sources */,
+				7DE4C6A8202228DD00BB30EA /* RootRouter.swift in Sources */,
 				7D507A6B2020FD2300C96E48 /* OnboardingViewContract.swift in Sources */,
 				7D507A692020FD1000C96E48 /* OnboardingPresenter.swift in Sources */,
 				7D507A582020F80200C96E48 /* Constants.swift in Sources */,
 				7D507A6D2020FEA300C96E48 /* MainViewContract.swift in Sources */,
 				7D507A79202106B600C96E48 /* MainModuleFactory.swift in Sources */,
+				7DE4C6A42022239B00BB30EA /* RootViewContract.swift in Sources */,
 				7D507A752021044900C96E48 /* DetailViewContract.swift in Sources */,
 				7D507A5E2020FB3700C96E48 /* OnboardingViewController.swift in Sources */,
 				7D507A7B202106D300C96E48 /* ListModuleFactory.swift in Sources */,
 				7D507A662020FC1600C96E48 /* OnboardingView.swift in Sources */,
+				7DE4C69C20221B2400BB30EA /* OnboardingRouterContract.swift in Sources */,
 				7D507A602020FBAE00C96E48 /* MainViewController.swift in Sources */,
+				7DE4C6AA2022294700BB30EA /* RootRouterContract.swift in Sources */,
 				7D507A642020FBD700C96E48 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

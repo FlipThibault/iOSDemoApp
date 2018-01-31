@@ -1,8 +1,15 @@
 import Foundation
 
-class OnboardingPresenter : OnboardingViewOutput {
+class OnboardingPresenter {
     
-//    let onboardingViewInput : OnboardingViewInput
+    var router: OnboardingRouterInput?
     
-    
+}
+
+extension OnboardingPresenter : OnboardingViewOutput {
+    func didClickNext() {
+        router?.requestDismiss()
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: Constants.UserDefaultKeys.hasSeenOnboarding)
+    }
 }
