@@ -1,12 +1,12 @@
 import Foundation
 import UIKit
 
-class ListViewController : UIViewController {
+class GridViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.green
+        self.view.backgroundColor = UIColor.red
     }
     
 }

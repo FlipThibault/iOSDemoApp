@@ -35,6 +35,8 @@
 		7DE4C6A6202223CF00BB30EA /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C6A5202223CF00BB30EA /* RootPresenter.swift */; };
 		7DE4C6A8202228DD00BB30EA /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C6A7202228DD00BB30EA /* RootRouter.swift */; };
 		7DE4C6AA2022294700BB30EA /* RootRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C6A92022294700BB30EA /* RootRouterContract.swift */; };
+		7DE4C6AD20225EF800BB30EA /* GridModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C6AC20225EF800BB30EA /* GridModuleFactory.swift */; };
+		7DE4C6AF20225F2800BB30EA /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C6AE20225F2800BB30EA /* GridViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		7DE4C6A5202223CF00BB30EA /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		7DE4C6A7202228DD00BB30EA /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		7DE4C6A92022294700BB30EA /* RootRouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterContract.swift; sourceTree = "<group>"; };
+		7DE4C6AC20225EF800BB30EA /* GridModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridModuleFactory.swift; sourceTree = "<group>"; };
+		7DE4C6AE20225F2800BB30EA /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 		7D507A532020F01800C96E48 /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7DE4C6AB20225EE600BB30EA /* grid */,
 				7D507A5B2020FAAE00C96E48 /* detail */,
 				7D507A5A2020FAA200C96E48 /* list */,
 				7D507A592020FA8A00C96E48 /* main */,
@@ -292,6 +297,15 @@
 			path = contracts;
 			sourceTree = "<group>";
 		};
+		7DE4C6AB20225EE600BB30EA /* grid */ = {
+			isa = PBXGroup;
+			children = (
+				7DE4C6AC20225EF800BB30EA /* GridModuleFactory.swift */,
+				7DE4C6AE20225F2800BB30EA /* GridViewController.swift */,
+			);
+			path = grid;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -431,7 +445,9 @@
 				7DA12D0D20201785000E1758 /* AppDelegate.swift in Sources */,
 				7DE4C6A1202221C400BB30EA /* RootModuleFactory.swift in Sources */,
 				7DE4C6A6202223CF00BB30EA /* RootPresenter.swift in Sources */,
+				7DE4C6AD20225EF800BB30EA /* GridModuleFactory.swift in Sources */,
 				7D507A622020FBC400C96E48 /* ListViewController.swift in Sources */,
+				7DE4C6AF20225F2800BB30EA /* GridViewController.swift in Sources */,
 				7D507A7D202106F200C96E48 /* DetailModuleFactory.swift in Sources */,
 				7D507A6F2020FEB700C96E48 /* ListViewContract.swift in Sources */,
 				7DE4C6A8202228DD00BB30EA /* RootRouter.swift in Sources */,
