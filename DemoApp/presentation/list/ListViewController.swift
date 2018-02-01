@@ -28,8 +28,15 @@ class ListViewController : UIViewController {
     
     private func setupConstraints() {
         
+        self.listView.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
 
+            self.listView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            self.listView.bottomAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.bottomAnchor),
+            self.listView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            self.listView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
+            
         ])
         
     }

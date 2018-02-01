@@ -5,9 +5,9 @@ class GridModuleFactory {
     
     static func buildModule() -> GridViewController {
         
-        let vc = GridViewController()
-                
-        let gridView = GridView(frame: UIScreen.main.bounds, collectionViewLayout: UICollectionViewFlowLayout())
+        let gridView = GridView(frame: CGRect(), collectionViewLayout: UICollectionViewFlowLayout())
+
+        let vc = GridViewController(gridView: gridView)
         
         let delegateDataSource = GridViewDelegateDataSource()
         gridView.delegate = delegateDataSource
