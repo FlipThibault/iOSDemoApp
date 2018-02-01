@@ -27,6 +27,7 @@
 		7D50D29220226859002FF60E /* ListViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50D29120226859002FF60E /* ListViewDelegateDataSource.swift */; };
 		7D50D29420227081002FF60E /* GridViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50D29320227081002FF60E /* GridViewDelegateDataSource.swift */; };
 		7D50D2962022710A002FF60E /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50D2952022710A002FF60E /* GridView.swift */; };
+		7D50D2A620239591002FF60E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D50D2A420239591002FF60E /* Localizable.strings */; };
 		7DA12D0D20201785000E1758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D0C20201785000E1758 /* AppDelegate.swift */; };
 		7DA12D0F20201785000E1758 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D0E20201785000E1758 /* RootViewController.swift */; };
 		7DA12D1420201785000E1758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA12D1320201785000E1758 /* Assets.xcassets */; };
@@ -84,6 +85,9 @@
 		7D50D29120226859002FF60E /* ListViewDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDelegateDataSource.swift; sourceTree = "<group>"; };
 		7D50D29320227081002FF60E /* GridViewDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewDelegateDataSource.swift; sourceTree = "<group>"; };
 		7D50D2952022710A002FF60E /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		7D50D29720239266002FF60E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7D50D2A520239591002FF60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7D50D2A720239597002FF60E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7DA12D0920201785000E1758 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA12D0C20201785000E1758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DA12D0E20201785000E1758 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 				7DA12D1520201785000E1758 /* LaunchScreen.storyboard */,
 				7DA12D1820201785000E1758 /* Info.plist */,
 				7D507A572020F80200C96E48 /* Constants.swift */,
+				7D50D2A420239591002FF60E /* Localizable.strings */,
 			);
 			path = DemoApp;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 7DA12D0020201785000E1758;
 			productRefGroup = 7DA12D0A20201785000E1758 /* Products */;
@@ -435,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DA12D1720201785000E1758 /* LaunchScreen.storyboard in Resources */,
+				7D50D2A620239591002FF60E /* Localizable.strings in Resources */,
 				7DA12D1420201785000E1758 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,10 +535,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7D50D2A420239591002FF60E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D50D2A520239591002FF60E /* Base */,
+				7D50D2A720239597002FF60E /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		7DA12D1520201785000E1758 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7DA12D1620201785000E1758 /* Base */,
+				7D50D29720239266002FF60E /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -543,6 +560,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -600,6 +618,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

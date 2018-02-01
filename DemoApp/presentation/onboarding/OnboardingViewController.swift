@@ -17,7 +17,19 @@ class OnboardingViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.red
+        if let subview = onboardingView {
+            
+            subview.translatesAutoresizingMaskIntoConstraints = false
+            self.view.addSubview(subview)
+            
+            NSLayoutConstraint.activate([
+                subview.topAnchor.constraint(equalTo: self.view.topAnchor),
+                subview.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+                subview.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+                subview.rightAnchor.constraint(equalTo: self.view.rightAnchor)
+            ])
+        }
+        
     }
     
 }

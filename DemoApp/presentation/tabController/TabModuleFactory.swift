@@ -8,13 +8,15 @@ class TabModuleFactory {
         let tabVC = TabViewController()
 
         let listVC = ListModuleFactory.buildModule()
-        listVC.title = "List"
+        let listTitle = NSLocalizedString("tab.title.list", comment: "")
+        listVC.title = listTitle
         
         let gridVC = GridModuleFactory.buildModule()
-        gridVC.title = "Grid"
+        let gridTitle = NSLocalizedString("tab.title.grid", comment: "")
+        gridVC.title = gridTitle
         
-        listVC.tabBarItem = UITabBarItem(title: "List", image: UIImage(named: "list"), tag: 0)
-        gridVC.tabBarItem = UITabBarItem(title: "Grid", image: UIImage(named: "grid"), tag: 1)
+        listVC.tabBarItem = UITabBarItem(title: listTitle, image: UIImage(named: "list"), tag: 0)
+        gridVC.tabBarItem = UITabBarItem(title: gridTitle, image: UIImage(named: "grid"), tag: 1)
 
         let controllers = [listVC, gridVC]
         tabVC.viewControllers = controllers

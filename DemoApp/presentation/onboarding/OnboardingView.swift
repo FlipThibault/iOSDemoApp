@@ -43,7 +43,7 @@ class OnboardingView : UIView {
     lazy var label : UILabel = {
         let label : UILabel = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Welcome to my demo app !"
+        label.text = NSLocalizedString("text.onboarding.welcome", comment: "")
         label.textColor = UIColor.black
         return label
     }()

@@ -12,7 +12,7 @@ class OnboardingModuleFactory {
         let router = OnboardingRouter(vc, with: onboardingRouterDelegate)
         
         view.delegate = vc
-        vc.view.addSubview(view)
+        vc.onboardingView = view
         presenter.router = router
         
         vc.presenter = presenter
