@@ -15,9 +15,7 @@ extension RootRouter : RootRouterInput {
     
     func goToNext() {
         
-        //TODO: need to check if another controller is currently present in order to dismiss it first
-        
-        let mainVc = MainModuleFactory.buildModule()
+        let mainVc = TabModuleFactory.buildModule()
 
         if let view = vc?.view {
             //standard child vc code

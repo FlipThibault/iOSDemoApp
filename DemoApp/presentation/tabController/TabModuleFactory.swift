@@ -1,18 +1,18 @@
 import Foundation
 import UIKit
 
-class MainModuleFactory {
+class TabModuleFactory {
     
-    static func buildModule() -> MainViewController {
+    static func buildModule() -> TabViewController {
         
-        let tabVC = MainViewController()
-        
+        let tabVC = TabViewController()
+
         let listVC = ListModuleFactory.buildModule()
         listVC.title = "List"
         
         let gridVC = GridModuleFactory.buildModule()
         gridVC.title = "Grid"
-
+        
         listVC.tabBarItem = UITabBarItem(title: "List", image: UIImage(named: "list"), tag: 0)
         gridVC.tabBarItem = UITabBarItem(title: "Grid", image: UIImage(named: "grid"), tag: 1)
 
