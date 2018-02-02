@@ -2,10 +2,12 @@ import Foundation
 
 class DetailPresenter : NSObject {
     
+    let id: String
     weak var view : DetailViewInput?
-    var router: DetailRouterInput
+    let router: DetailRouterInput
     
-    init(with router : DetailRouterInput) {
+    init(with id: String, with router : DetailRouterInput) {
+        self.id = id
         self.router = router
     }
     
