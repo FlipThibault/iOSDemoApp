@@ -4,17 +4,17 @@ import UIKit
 class ListViewController : UIViewController {
     
     var presenter: ListViewOutput?
-    var listView: ListView
-    var dataSourceDelegate: ListViewDelegateDataSource
+    private var listView: ListView
     
-    init(listView: ListView, dataSourceDelegate: ListViewDelegateDataSource) {
-        self.listView = listView
-        self.dataSourceDelegate = dataSourceDelegate
+    private let myArray: NSArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
+    
+    init(with view: ListView) {
+        self.listView = view
         super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(Constants.ErrorMessages.notImplementedInitWithCoder)
     }
     
     override func viewDidLoad() {
@@ -23,16 +23,16 @@ class ListViewController : UIViewController {
         setupTableView()
         setupConstraints()
         
-//        let btn = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(edit(_:)))
-//        navigationItem.rightBarButtonItem = btn
+        let btn = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(edit(_:)))
+        navigationItem.rightBarButtonItem = btn
     }
     
     private func setupTableView() {
-        self.listView.dataSource = dataSourceDelegate
-        self.listView.delegate = dataSourceDelegate
+        self.listView.dataSource = self
+        self.listView.delegate = self
         self.view.addSubview(listView)
         
-        listView.register(CellView.self, forCellReuseIdentifier: Constants.TableViewCellIdentifier.cellView)
+        listView.register(ListCellView.self, forCellReuseIdentifier: Constants.TableViewCellIdentifier.listCellView)
     }
     
     private func setupConstraints() {
@@ -49,23 +49,50 @@ class ListViewController : UIViewController {
         ])
         
     }
-//
-//    @objc func edit(_ sender : UIBarButtonItem) {
-//        listView.setEditing(!listView.isEditing, animated: true)
-//
-//        if listView.isEditing {
-//            listView.setEditing(true, animated: true) // func setEditing(_ editing: Bool, animated: Bool)
-//            sender.title = "Done"
-//        }
-//        else {
-//            print("not editing")
-//            listView.setEditing(false, animated: true)
-//            sender.title = "Edit"
-//        }
-//    }
+
+    @objc func edit(_ sender : UIBarButtonItem) {
+        listView.setEditing(!listView.isEditing, animated: true)
+
+        if listView.isEditing {
+            listView.setEditing(true, animated: true)
+            sender.title = NSLocalizedString("action.navigation.done", comment: "")
+        }
+        else {
+            listView.setEditing(false, animated: true)
+            sender.title = NSLocalizedString("action.navigation.edit", comment: "")
+        }
+    }
     
 }
 
-extension ListViewController : ListViewDelegate {
+extension ListViewController : UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return myArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCellIdentifier.listCellView, for: indexPath) as! ListCellView
+        cell.titleLabel.text = "\(myArray[indexPath.row])"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+}
+
+extension ListViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        presenter?.didClickCellAtIndex(indexPath: indexPath)
+    }
     
 }

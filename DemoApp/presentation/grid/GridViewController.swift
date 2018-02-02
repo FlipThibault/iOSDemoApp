@@ -3,6 +3,8 @@ import UIKit
 
 class GridViewController : UIViewController {
     
+    private let myArray: NSArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
+    
     var gridView: GridView
     
     init(gridView: GridView) {
@@ -11,15 +13,22 @@ class GridViewController : UIViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(Constants.ErrorMessages.notImplementedInitWithCoder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupCollectionView()
+        setupConstraints()
+    }
+    
+    private func setupCollectionView() {
+        self.gridView.delegate = self
+        self.gridView.dataSource = self
         self.view.addSubview(gridView)
         
-        setupConstraints()
+        self.gridView.register(GridCellView.self, forCellWithReuseIdentifier: Constants.CollectionViewCellIdentifier.CollectionCellView)
     }
     
     private func setupConstraints() {
@@ -28,12 +37,40 @@ class GridViewController : UIViewController {
         
         NSLayoutConstraint.activate([
             
-            self.gridView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            self.gridView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
             self.gridView.bottomAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.bottomAnchor),
             self.gridView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             self.gridView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
             
         ])
+        
+    }
+    
+}
+
+extension GridViewController : UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return myArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CollectionViewCellIdentifier.CollectionCellView, for: indexPath) as! GridCellView
+        
+        cell.titleLabel.text = "\(myArray[indexPath.row])"
+
+        return cell
+    }
+    
+}
+
+extension GridViewController : UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
     

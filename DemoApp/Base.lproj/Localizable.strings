@@ -2,3 +2,6 @@
 "tab.title.grid" = "Grid";
 
 "text.onboarding.welcome" = "Welcome to my demo app !";
+
+"action.navigation.edit" = "Edit";
+"action.navigation.done" = "Done";

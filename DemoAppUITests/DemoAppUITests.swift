@@ -1,11 +1,3 @@
-//
-//  DemoAppUITests.swift
-//  DemoAppUITests
-//
-//  Created by Felipe Eduardo on 2018-01-29.
-//  Copyright © 2018 Flip. All rights reserved.
-//
-
 import XCTest
 
 class DemoAppUITests: XCTestCase {

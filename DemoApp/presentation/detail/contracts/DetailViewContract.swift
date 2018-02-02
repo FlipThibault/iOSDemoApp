@@ -1,9 +1,9 @@
 import Foundation
 
-protocol DetailViewInput {
+protocol DetailViewInput : NSObjectProtocol {
     
 }
 
-protocol DetailViewOutput {
+protocol DetailViewOutput : NSObjectProtocol {
     
 }

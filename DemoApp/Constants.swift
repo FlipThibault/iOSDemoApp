@@ -7,7 +7,14 @@ struct Constants {
     }
     
     struct TableViewCellIdentifier {
-        static let cellView = "CellView"
+        static let listCellView = "ListCellView"
     }
     
+    struct CollectionViewCellIdentifier {
+        static let CollectionCellView = "CollectionCellView"
+    }
+
+    struct ErrorMessages {
+        static let notImplementedInitWithCoder = "init(coder:) has not been implemented"
+    }
 }

@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class CellView : UITableViewCell {
+class ListCellView : UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -11,14 +11,14 @@ class CellView : UITableViewCell {
         NSLayoutConstraint.activate([
             self.titleLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor),
             self.titleLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
-            self.titleLabel.leftAnchor.constraint(equalTo: self.contentView.leftAnchor),
-            self.titleLabel.rightAnchor.constraint(equalTo: self.contentView.rightAnchor)
+            self.titleLabel.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 20),
+            self.titleLabel.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: 20)
         ])
         
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(Constants.ErrorMessages.notImplementedInitWithCoder)
     }
     
     lazy var titleLabel : UILabel = {

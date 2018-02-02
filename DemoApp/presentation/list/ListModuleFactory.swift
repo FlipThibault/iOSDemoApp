@@ -6,12 +6,12 @@ class ListModuleFactory {
     static func buildModule() -> ListViewController {
         
         let listView = ListView(frame: UIScreen.main.bounds, style: .plain)
-        let vc = ListViewController(listView: listView, dataSourceDelegate: ListViewDelegateDataSource())
+        let vc = ListViewController(with: listView)
+                
+        let router = ListRouter(with: vc)
+        let presenter = ListPresenter(with: router)
         
-        listView.listViewDelegate = vc
-        
-        let presenter = ListPresenter()
-        let router = ListRouter()
+        vc.presenter = presenter
         
         return vc
     }

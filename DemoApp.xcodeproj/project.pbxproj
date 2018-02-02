@@ -24,11 +24,15 @@
 		7D507A7D202106F200C96E48 /* DetailModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D507A7C202106F200C96E48 /* DetailModuleFactory.swift */; };
 		7D50D28E202265D6002FF60E /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50D28D202265D6002FF60E /* ListView.swift */; };
 		7D50D290202266A8002FF60E /* FetchItemsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50D28F202266A8002FF60E /* FetchItemsInteractor.swift */; };
-		7D50D29220226859002FF60E /* ListViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50D29120226859002FF60E /* ListViewDelegateDataSource.swift */; };
-		7D50D29420227081002FF60E /* GridViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50D29320227081002FF60E /* GridViewDelegateDataSource.swift */; };
 		7D50D2962022710A002FF60E /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50D2952022710A002FF60E /* GridView.swift */; };
 		7D50D2A620239591002FF60E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D50D2A420239591002FF60E /* Localizable.strings */; };
-		7D50D2A92024CBF1002FF60E /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50D2A82024CBF1002FF60E /* CellView.swift */; };
+		7D50D2A92024CBF1002FF60E /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50D2A82024CBF1002FF60E /* ListCellView.swift */; };
+		7D7F01AC2024FB2500D51963 /* ListRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01AB2024FB2500D51963 /* ListRouterContract.swift */; };
+		7D7F01B02025026100D51963 /* GridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01AF2025026100D51963 /* GridCellView.swift */; };
+		7D7F01B22025042E00D51963 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01B12025042E00D51963 /* DetailRouter.swift */; };
+		7D7F01B42025043700D51963 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01B32025043700D51963 /* DetailPresenter.swift */; };
+		7D7F01B6202504F200D51963 /* DetailRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01B5202504F200D51963 /* DetailRouterContract.swift */; };
+		7D7F01B8202508AD00D51963 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01B7202508AD00D51963 /* DetailView.swift */; };
 		7DA12D0D20201785000E1758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D0C20201785000E1758 /* AppDelegate.swift */; };
 		7DA12D0F20201785000E1758 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D0E20201785000E1758 /* RootViewController.swift */; };
 		7DA12D1420201785000E1758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA12D1320201785000E1758 /* Assets.xcassets */; };
@@ -83,13 +87,17 @@
 		7D507A7C202106F200C96E48 /* DetailModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModuleFactory.swift; sourceTree = "<group>"; };
 		7D50D28D202265D6002FF60E /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		7D50D28F202266A8002FF60E /* FetchItemsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchItemsInteractor.swift; sourceTree = "<group>"; };
-		7D50D29120226859002FF60E /* ListViewDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDelegateDataSource.swift; sourceTree = "<group>"; };
-		7D50D29320227081002FF60E /* GridViewDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewDelegateDataSource.swift; sourceTree = "<group>"; };
 		7D50D2952022710A002FF60E /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		7D50D29720239266002FF60E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		7D50D2A520239591002FF60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7D50D2A720239597002FF60E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7D50D2A82024CBF1002FF60E /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		7D50D2A82024CBF1002FF60E /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
+		7D7F01AB2024FB2500D51963 /* ListRouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterContract.swift; sourceTree = "<group>"; };
+		7D7F01AF2025026100D51963 /* GridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCellView.swift; sourceTree = "<group>"; };
+		7D7F01B12025042E00D51963 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		7D7F01B32025043700D51963 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		7D7F01B5202504F200D51963 /* DetailRouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouterContract.swift; sourceTree = "<group>"; };
+		7D7F01B7202508AD00D51963 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		7DA12D0920201785000E1758 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA12D0C20201785000E1758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DA12D0E20201785000E1758 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -200,8 +208,7 @@
 				7DE4C6B22022634800BB30EA /* ListRouter.swift */,
 				7D50D28D202265D6002FF60E /* ListView.swift */,
 				7D507A612020FBC400C96E48 /* ListViewController.swift */,
-				7D50D29120226859002FF60E /* ListViewDelegateDataSource.swift */,
-				7D50D2A82024CBF1002FF60E /* CellView.swift */,
+				7D50D2A82024CBF1002FF60E /* ListCellView.swift */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -211,7 +218,10 @@
 			children = (
 				7DE4C69F20221BA500BB30EA /* contracts */,
 				7D507A7C202106F200C96E48 /* DetailModuleFactory.swift */,
+				7D7F01B7202508AD00D51963 /* DetailView.swift */,
 				7D507A632020FBD700C96E48 /* DetailViewController.swift */,
+				7D7F01B32025043700D51963 /* DetailPresenter.swift */,
+				7D7F01B12025042E00D51963 /* DetailRouter.swift */,
 			);
 			path = detail;
 			sourceTree = "<group>";
@@ -303,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				7D507A6E2020FEB700C96E48 /* ListViewContract.swift */,
+				7D7F01AB2024FB2500D51963 /* ListRouterContract.swift */,
 			);
 			path = contracts;
 			sourceTree = "<group>";
@@ -311,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				7D507A742021044900C96E48 /* DetailViewContract.swift */,
+				7D7F01B5202504F200D51963 /* DetailRouterContract.swift */,
 			);
 			path = contracts;
 			sourceTree = "<group>";
@@ -330,7 +342,7 @@
 				7DE4C6AC20225EF800BB30EA /* GridModuleFactory.swift */,
 				7D50D2952022710A002FF60E /* GridView.swift */,
 				7DE4C6AE20225F2800BB30EA /* GridViewController.swift */,
-				7D50D29320227081002FF60E /* GridViewDelegateDataSource.swift */,
+				7D7F01AF2025026100D51963 /* GridCellView.swift */,
 			);
 			path = grid;
 			sourceTree = "<group>";
@@ -470,16 +482,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D50D29220226859002FF60E /* ListViewDelegateDataSource.swift in Sources */,
 				7DA12D0F20201785000E1758 /* RootViewController.swift in Sources */,
+				7D7F01B22025042E00D51963 /* DetailRouter.swift in Sources */,
 				7DE4C69920221AAD00BB30EA /* OnboardingRouter.swift in Sources */,
 				7D507A772021063300C96E48 /* OnboardingModuleFactory.swift in Sources */,
-				7D50D29420227081002FF60E /* GridViewDelegateDataSource.swift in Sources */,
 				7DA12D0D20201785000E1758 /* AppDelegate.swift in Sources */,
 				7DE4C6A1202221C400BB30EA /* RootModuleFactory.swift in Sources */,
 				7DE4C6A6202223CF00BB30EA /* RootPresenter.swift in Sources */,
 				7DE4C6AD20225EF800BB30EA /* GridModuleFactory.swift in Sources */,
 				7D507A622020FBC400C96E48 /* ListViewController.swift in Sources */,
+				7D7F01B02025026100D51963 /* GridCellView.swift in Sources */,
 				7DE4C6B32022634800BB30EA /* ListRouter.swift in Sources */,
 				7DE4C6AF20225F2800BB30EA /* GridViewController.swift in Sources */,
 				7D507A7D202106F200C96E48 /* DetailModuleFactory.swift in Sources */,
@@ -490,11 +502,14 @@
 				7D507A692020FD1000C96E48 /* OnboardingPresenter.swift in Sources */,
 				7D507A582020F80200C96E48 /* Constants.swift in Sources */,
 				7D507A6D2020FEA300C96E48 /* TabViewContract.swift in Sources */,
+				7D7F01B6202504F200D51963 /* DetailRouterContract.swift in Sources */,
 				7D507A79202106B600C96E48 /* TabModuleFactory.swift in Sources */,
 				7DE4C6A42022239B00BB30EA /* RootViewContract.swift in Sources */,
+				7D7F01B42025043700D51963 /* DetailPresenter.swift in Sources */,
 				7D507A752021044900C96E48 /* DetailViewContract.swift in Sources */,
+				7D7F01AC2024FB2500D51963 /* ListRouterContract.swift in Sources */,
 				7D507A5E2020FB3700C96E48 /* OnboardingViewController.swift in Sources */,
-				7D50D2A92024CBF1002FF60E /* CellView.swift in Sources */,
+				7D50D2A92024CBF1002FF60E /* ListCellView.swift in Sources */,
 				7D507A7B202106D300C96E48 /* ListModuleFactory.swift in Sources */,
 				7D50D2962022710A002FF60E /* GridView.swift in Sources */,
 				7D507A662020FC1600C96E48 /* OnboardingView.swift in Sources */,
@@ -502,6 +517,7 @@
 				7D50D28E202265D6002FF60E /* ListView.swift in Sources */,
 				7D507A602020FBAE00C96E48 /* TabViewController.swift in Sources */,
 				7DE4C6AA2022294700BB30EA /* RootRouterContract.swift in Sources */,
+				7D7F01B8202508AD00D51963 /* DetailView.swift in Sources */,
 				7D50D290202266A8002FF60E /* FetchItemsInteractor.swift in Sources */,
 				7D507A642020FBD700C96E48 /* DetailViewController.swift in Sources */,
 			);

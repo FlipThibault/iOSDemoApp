@@ -11,7 +11,7 @@ class OnboardingViewController : UIViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(Constants.ErrorMessages.notImplementedInitWithCoder)
     }
     
     override func viewDidLoad() {
