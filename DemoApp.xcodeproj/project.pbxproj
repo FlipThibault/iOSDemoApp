@@ -28,6 +28,7 @@
 		7D50D29420227081002FF60E /* GridViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50D29320227081002FF60E /* GridViewDelegateDataSource.swift */; };
 		7D50D2962022710A002FF60E /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50D2952022710A002FF60E /* GridView.swift */; };
 		7D50D2A620239591002FF60E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D50D2A420239591002FF60E /* Localizable.strings */; };
+		7D50D2A92024CBF1002FF60E /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50D2A82024CBF1002FF60E /* CellView.swift */; };
 		7DA12D0D20201785000E1758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D0C20201785000E1758 /* AppDelegate.swift */; };
 		7DA12D0F20201785000E1758 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D0E20201785000E1758 /* RootViewController.swift */; };
 		7DA12D1420201785000E1758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA12D1320201785000E1758 /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 		7D50D29720239266002FF60E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		7D50D2A520239591002FF60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7D50D2A720239597002FF60E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7D50D2A82024CBF1002FF60E /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		7DA12D0920201785000E1758 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA12D0C20201785000E1758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DA12D0E20201785000E1758 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				7D50D28D202265D6002FF60E /* ListView.swift */,
 				7D507A612020FBC400C96E48 /* ListViewController.swift */,
 				7D50D29120226859002FF60E /* ListViewDelegateDataSource.swift */,
+				7D50D2A82024CBF1002FF60E /* CellView.swift */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				7DE4C6A42022239B00BB30EA /* RootViewContract.swift in Sources */,
 				7D507A752021044900C96E48 /* DetailViewContract.swift in Sources */,
 				7D507A5E2020FB3700C96E48 /* OnboardingViewController.swift in Sources */,
+				7D50D2A92024CBF1002FF60E /* CellView.swift in Sources */,
 				7D507A7B202106D300C96E48 /* ListModuleFactory.swift in Sources */,
 				7D50D2962022710A002FF60E /* GridView.swift in Sources */,
 				7D507A662020FC1600C96E48 /* OnboardingView.swift in Sources */,

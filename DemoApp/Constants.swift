@@ -6,4 +6,8 @@ struct Constants {
         static let hasSeenOnboarding = "has_seen_onboarding"
     }
     
+    struct TableViewCellIdentifier {
+        static let cellView = "CellView"
+    }
+    
 }

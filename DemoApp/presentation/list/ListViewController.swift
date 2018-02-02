@@ -5,9 +5,11 @@ class ListViewController : UIViewController {
     
     var presenter: ListViewOutput?
     var listView: ListView
+    var dataSourceDelegate: ListViewDelegateDataSource
     
-    init(listView: ListView) {
+    init(listView: ListView, dataSourceDelegate: ListViewDelegateDataSource) {
         self.listView = listView
+        self.dataSourceDelegate = dataSourceDelegate
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -17,13 +19,20 @@ class ListViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.view.addSubview(listView)
         
+        setupTableView()
         setupConstraints()
         
 //        let btn = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(edit(_:)))
 //        navigationItem.rightBarButtonItem = btn
+    }
+    
+    private func setupTableView() {
+        self.listView.dataSource = dataSourceDelegate
+        self.listView.delegate = dataSourceDelegate
+        self.view.addSubview(listView)
+        
+        listView.register(CellView.self, forCellReuseIdentifier: Constants.TableViewCellIdentifier.cellView)
     }
     
     private func setupConstraints() {
@@ -32,7 +41,7 @@ class ListViewController : UIViewController {
         
         NSLayoutConstraint.activate([
 
-            self.listView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            self.listView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
             self.listView.bottomAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.bottomAnchor),
             self.listView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             self.listView.rightAnchor.constraint(equalTo: self.view.rightAnchor)

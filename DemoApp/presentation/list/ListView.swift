@@ -20,8 +20,7 @@ class ListView : UITableView {
     }
     
     private func initialize() {
-
-        self.backgroundColor = UIColor.blue
-        
+        self.separatorStyle = .none
     }
+
 }

@@ -1,18 +1,14 @@
 import Foundation
+import UIKit
 
 class ListModuleFactory {
     
     static func buildModule() -> ListViewController {
         
-        let listView = ListView()
-        let vc = ListViewController(listView: listView)
-        vc.listView = listView
-        
-        let listViewDelegateDataSource = ListViewDelegateDataSource()
+        let listView = ListView(frame: UIScreen.main.bounds, style: .plain)
+        let vc = ListViewController(listView: listView, dataSourceDelegate: ListViewDelegateDataSource())
         
         listView.listViewDelegate = vc
-        listView.delegate = listViewDelegateDataSource
-        listView.dataSource = listViewDelegateDataSource
         
         let presenter = ListPresenter()
         let router = ListRouter()
