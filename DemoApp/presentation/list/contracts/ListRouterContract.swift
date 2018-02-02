@@ -2,7 +2,7 @@ import Foundation
 
 protocol ListRouterInput {
  
-    func goToDetail()
+    func goToDetail(for id: String)
     
 }
 

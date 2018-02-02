@@ -13,9 +13,9 @@ class ListRouter {
 
 extension ListRouter : ListRouterInput {
     
-    func goToDetail() {
+    func goToDetail(for id: String) {
         
-        let detailVC = DetailModuleFactory.buildModule()
+        let detailVC = DetailModuleFactory.buildModule(with: id)
         
         vc?.navigationController?.pushViewController(detailVC, animated: true)
     }
