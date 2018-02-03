@@ -4,4 +4,5 @@
 "text.onboarding.welcome" = "Bienvenue à mon appli demo !";
 
 "action.navigation.edit" = "Modifier";
+"action.navigation.add" = "Ajouter";
 "action.navigation.done" = "Sauv.";
