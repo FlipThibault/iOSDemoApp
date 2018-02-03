@@ -2,13 +2,19 @@ import Foundation
 
 class FetchOnboardingStatusInteractor {
     
+    var dataSource: KeyValueDataSource?
+    
 }
 
 extension FetchOnboardingStatusInteractor : FetchOnboardingStatusUseCase {
     
-    func shouldShowOnboarding(_ completion: (Bool) -> Void) {
+    func shouldShowOnboarding(_ completion: (_ hasSeenOboarding: Bool) -> Void) {
         
-        completion(true)
+        let key = Constants.UserDefaultKeys.hasSeenOnboarding
+        
+        dataSource?.getPersistedBoolValue(for: key, { (hasSeenOnboarding) in
+            completion(hasSeenOnboarding)
+        })
         
     }
     

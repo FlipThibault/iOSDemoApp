@@ -45,6 +45,10 @@
 		7D7F01D820252B9A00D51963 /* DeleteItemUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01D720252B9A00D51963 /* DeleteItemUseCase.swift */; };
 		7D7F01DB2025347200D51963 /* FetchOnboardingStatusUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01DA2025347200D51963 /* FetchOnboardingStatusUseCase.swift */; };
 		7D7F01DD2025367200D51963 /* FetchOnboardingStatusInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01DC2025367200D51963 /* FetchOnboardingStatusInteractor.swift */; };
+		7D7F01DF20253F0F00D51963 /* KeyValueDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01DE20253F0F00D51963 /* KeyValueDataSource.swift */; };
+		7D7F01E220253F6800D51963 /* NSUserDefaultDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01E120253F6800D51963 /* NSUserDefaultDataSource.swift */; };
+		7D7F01E4202541FE00D51963 /* SetOnboardingStatusUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01E3202541FE00D51963 /* SetOnboardingStatusUseCase.swift */; };
+		7D7F01E72025421F00D51963 /* SetOnboardingStatusInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01E62025421F00D51963 /* SetOnboardingStatusInteractor.swift */; };
 		7DA12D0D20201785000E1758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D0C20201785000E1758 /* AppDelegate.swift */; };
 		7DA12D0F20201785000E1758 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D0E20201785000E1758 /* RootViewController.swift */; };
 		7DA12D1420201785000E1758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA12D1320201785000E1758 /* Assets.xcassets */; };
@@ -122,6 +126,10 @@
 		7D7F01D720252B9A00D51963 /* DeleteItemUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteItemUseCase.swift; sourceTree = "<group>"; };
 		7D7F01DA2025347200D51963 /* FetchOnboardingStatusUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchOnboardingStatusUseCase.swift; sourceTree = "<group>"; };
 		7D7F01DC2025367200D51963 /* FetchOnboardingStatusInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchOnboardingStatusInteractor.swift; sourceTree = "<group>"; };
+		7D7F01DE20253F0F00D51963 /* KeyValueDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueDataSource.swift; sourceTree = "<group>"; };
+		7D7F01E120253F6800D51963 /* NSUserDefaultDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultDataSource.swift; sourceTree = "<group>"; };
+		7D7F01E3202541FE00D51963 /* SetOnboardingStatusUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetOnboardingStatusUseCase.swift; sourceTree = "<group>"; };
+		7D7F01E62025421F00D51963 /* SetOnboardingStatusInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetOnboardingStatusInteractor.swift; sourceTree = "<group>"; };
 		7DA12D0920201785000E1758 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA12D0C20201785000E1758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DA12D0E20201785000E1758 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +197,7 @@
 		7D507A542020F02300C96E48 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				7D7F01E52025420300D51963 /* SetOnboardingStatusUseCase */,
 				7D7F01D92025341800D51963 /* FetchOnboardingStatusUseCase */,
 				7D7F01D420252B5A00D51963 /* SaveItemUseCase */,
 				7D7F01D320252B5200D51963 /* SaveListUseCase */,
@@ -283,6 +292,7 @@
 		7D7F01BE202525DF00D51963 /* datasource */ = {
 			isa = PBXGroup;
 			children = (
+				7D7F01E020253F1C00D51963 /* KeyValueDataSource */,
 				7D7F01BF202525E900D51963 /* ListDataSource */,
 				7D7F01C0202525FC00D51963 /* ListItemDataSource */,
 			);
@@ -357,10 +367,28 @@
 		7D7F01D92025341800D51963 /* FetchOnboardingStatusUseCase */ = {
 			isa = PBXGroup;
 			children = (
-				7D7F01DA2025347200D51963 /* FetchOnboardingStatusUseCase.swift */,
 				7D7F01DC2025367200D51963 /* FetchOnboardingStatusInteractor.swift */,
+				7D7F01DA2025347200D51963 /* FetchOnboardingStatusUseCase.swift */,
 			);
 			path = FetchOnboardingStatusUseCase;
+			sourceTree = "<group>";
+		};
+		7D7F01E020253F1C00D51963 /* KeyValueDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				7D7F01DE20253F0F00D51963 /* KeyValueDataSource.swift */,
+				7D7F01E120253F6800D51963 /* NSUserDefaultDataSource.swift */,
+			);
+			path = KeyValueDataSource;
+			sourceTree = "<group>";
+		};
+		7D7F01E52025420300D51963 /* SetOnboardingStatusUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				7D7F01E62025421F00D51963 /* SetOnboardingStatusInteractor.swift */,
+				7D7F01E3202541FE00D51963 /* SetOnboardingStatusUseCase.swift */,
+			);
+			path = SetOnboardingStatusUseCase;
 			sourceTree = "<group>";
 		};
 		7DA12D0020201785000E1758 = {
@@ -618,6 +646,7 @@
 				7D7F01B02025026100D51963 /* GridCellView.swift in Sources */,
 				7D7F01CC2025285300D51963 /* SaveListUseCase.swift in Sources */,
 				7DE4C6B32022634800BB30EA /* ListRouter.swift in Sources */,
+				7D7F01E72025421F00D51963 /* SetOnboardingStatusInteractor.swift in Sources */,
 				7DE4C6AF20225F2800BB30EA /* GridViewController.swift in Sources */,
 				7D507A7D202106F200C96E48 /* DetailModuleFactory.swift in Sources */,
 				7D7F01DB2025347200D51963 /* FetchOnboardingStatusUseCase.swift in Sources */,
@@ -636,11 +665,14 @@
 				7D7F01C8202526AD00D51963 /* ListItemDataSource.swift in Sources */,
 				7D7F01C42025266000D51963 /* FetchListUseCase.swift in Sources */,
 				7D507A752021044900C96E48 /* DetailViewContract.swift in Sources */,
+				7D7F01E4202541FE00D51963 /* SetOnboardingStatusUseCase.swift in Sources */,
 				7D7F01DD2025367200D51963 /* FetchOnboardingStatusInteractor.swift in Sources */,
 				7D7F01AC2024FB2500D51963 /* ListRouterContract.swift in Sources */,
 				7D7F01BD202521D300D51963 /* ListItemModel.swift in Sources */,
 				7D507A5E2020FB3700C96E48 /* OnboardingViewController.swift in Sources */,
 				7D50D2A92024CBF1002FF60E /* ListCellView.swift in Sources */,
+				7D7F01DF20253F0F00D51963 /* KeyValueDataSource.swift in Sources */,
+				7D7F01E220253F6800D51963 /* NSUserDefaultDataSource.swift in Sources */,
 				7D7F01CE20252B2000D51963 /* FetchItemInteractor.swift in Sources */,
 				7D507A7B202106D300C96E48 /* ListModuleFactory.swift in Sources */,
 				7D50D2962022710A002FF60E /* GridView.swift in Sources */,

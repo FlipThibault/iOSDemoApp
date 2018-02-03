@@ -11,6 +11,12 @@ class OnboardingModuleFactory {
         let presenter = OnboardingPresenter()
         let router = OnboardingRouter(vc, with: onboardingRouterDelegate)
         
+        let interactor = SetOnboardingStatusInteractor()
+        let dataSource = NSUserDefaultsDataSource()
+        interactor.dataSource = dataSource
+        
+        presenter.interactor = interactor
+        
         view.delegate = vc
         vc.onboardingView = view
         presenter.router = router

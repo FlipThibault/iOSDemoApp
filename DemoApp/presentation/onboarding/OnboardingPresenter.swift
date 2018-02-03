@@ -3,14 +3,14 @@ import Foundation
 class OnboardingPresenter {
     
     var router: OnboardingRouterInput?
+    var interactor: SetOnboardingStatusUseCase?
     
 }
 
 extension OnboardingPresenter : OnboardingViewOutput {
     func didClickNext() {
-        router?.requestDismiss()
-        //move this into interactor/data store eventually
-        let defaults = UserDefaults.standard
-        defaults.set(true, forKey: Constants.UserDefaultKeys.hasSeenOnboarding)
+        interactor?.setStatusForOnboarding(true, { (success) in
+            router?.requestDismiss()
+        })
     }
 }
