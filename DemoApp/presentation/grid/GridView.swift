@@ -15,6 +15,8 @@ class GridView : UICollectionView {
     
     private func initialize() {
         
+        self.backgroundColor = UIColor.white
+        
     }
     
 }

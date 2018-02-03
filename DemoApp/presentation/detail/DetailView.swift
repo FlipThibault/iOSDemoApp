@@ -21,8 +21,8 @@ class DetailView : UIView {
         textField.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            self.textField.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            self.textField.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: 20),
+            self.textField.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            self.textField.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 20),
             self.textField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
             self.textField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 20)
         ])

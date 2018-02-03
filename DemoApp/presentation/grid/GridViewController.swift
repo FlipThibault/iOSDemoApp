@@ -37,8 +37,8 @@ class GridViewController : UIViewController {
         
         NSLayoutConstraint.activate([
             
-            self.gridView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            self.gridView.bottomAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.bottomAnchor),
+            self.gridView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            self.gridView.bottomAnchor.constraint(equalTo:self.view.bottomAnchor),
             self.gridView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             self.gridView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
             
@@ -59,7 +59,9 @@ extension GridViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CollectionViewCellIdentifier.CollectionCellView, for: indexPath) as! GridCellView
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CollectionViewCellIdentifier.CollectionCellView, for: indexPath) as? GridCellView else {
+            fatalError(Constants.ErrorMessages.cellTypeNotRegistered)
+        }
         
         cell.titleLabel.text = "\(myArray[indexPath.row])"
 

@@ -1,8 +1,5 @@
 import Foundation
 
 protocol DeleteListUseCase {
-    
-    func deleteList(by id: String/*, with completion: SomeCompletion*/)
-    
+    func deleteList(by identifier: String/*, with completion: SomeCompletion*/)
 }
-

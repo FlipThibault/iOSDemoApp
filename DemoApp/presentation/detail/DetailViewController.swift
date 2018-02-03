@@ -23,8 +23,8 @@ class DetailViewController : UIViewController {
         self.detailView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            self.detailView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            self.detailView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
+            self.detailView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            self.detailView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             self.detailView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             self.detailView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
         ])

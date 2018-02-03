@@ -41,8 +41,8 @@ class ListViewController : UIViewController {
         
         NSLayoutConstraint.activate([
 
-            self.listView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            self.listView.bottomAnchor.constraint(equalTo:self.view.safeAreaLayoutGuide.bottomAnchor),
+            self.listView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            self.listView.bottomAnchor.constraint(equalTo:self.view.bottomAnchor),
             self.listView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             self.listView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
             
@@ -76,7 +76,9 @@ extension ListViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCellIdentifier.listCellView, for: indexPath) as! ListCellView
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCellIdentifier.listCellView, for: indexPath) as? ListCellView else {
+            fatalError(Constants.ErrorMessages.cellTypeNotRegistered)
+        }
         cell.titleLabel.text = "\(myArray[indexPath.row])"
         return cell
     }
