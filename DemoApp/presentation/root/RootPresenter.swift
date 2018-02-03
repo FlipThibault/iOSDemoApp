@@ -1,8 +1,9 @@
 import Foundation
 
-class RootPresenter {
+class RootPresenter: NSObject {
     
     var router : RootRouterInput?
+    var interactor : FetchOnboardingStatusUseCase?
     
 }
 
@@ -10,15 +11,14 @@ extension RootPresenter : RootViewOutput {
     
     func viewDidLoad() {
         
-        //move this into interactor/data source eventually
-        let defaults = UserDefaults.standard
-        let hasSeenOnboarding = defaults.bool(forKey: Constants.UserDefaultKeys.hasSeenOnboarding)
+        interactor?.shouldShowOnboarding({ (hasSeenOnboarding) in
+            if(hasSeenOnboarding) {
+                router?.goToNext()
+            } else {
+                router?.goToOnboarding()
+            }
+        })
 
-        if(hasSeenOnboarding) {
-            router?.goToNext()
-        } else {
-            router?.goToOnboarding()
-        }
     }
     
 }

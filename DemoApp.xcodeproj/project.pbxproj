@@ -43,11 +43,13 @@
 		7D7F01CE20252B2000D51963 /* FetchItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01CD20252B2000D51963 /* FetchItemInteractor.swift */; };
 		7D7F01D620252B7300D51963 /* SaveItemUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01D520252B7300D51963 /* SaveItemUseCase.swift */; };
 		7D7F01D820252B9A00D51963 /* DeleteItemUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01D720252B9A00D51963 /* DeleteItemUseCase.swift */; };
+		7D7F01DB2025347200D51963 /* FetchOnboardingStatusUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01DA2025347200D51963 /* FetchOnboardingStatusUseCase.swift */; };
+		7D7F01DD2025367200D51963 /* FetchOnboardingStatusInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01DC2025367200D51963 /* FetchOnboardingStatusInteractor.swift */; };
 		7DA12D0D20201785000E1758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D0C20201785000E1758 /* AppDelegate.swift */; };
 		7DA12D0F20201785000E1758 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D0E20201785000E1758 /* RootViewController.swift */; };
 		7DA12D1420201785000E1758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA12D1320201785000E1758 /* Assets.xcassets */; };
 		7DA12D1720201785000E1758 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DA12D1520201785000E1758 /* LaunchScreen.storyboard */; };
-		7DA12D2220201786000E1758 /* DemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D2120201786000E1758 /* DemoAppTests.swift */; };
+		7DA12D2220201786000E1758 /* RootPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D2120201786000E1758 /* RootPresenterTests.swift */; };
 		7DA12D2D20201786000E1758 /* DemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D2C20201786000E1758 /* DemoAppUITests.swift */; };
 		7DE4C69920221AAD00BB30EA /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C69820221AAD00BB30EA /* OnboardingRouter.swift */; };
 		7DE4C69C20221B2400BB30EA /* OnboardingRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C69B20221B2400BB30EA /* OnboardingRouterContract.swift */; };
@@ -118,6 +120,8 @@
 		7D7F01CD20252B2000D51963 /* FetchItemInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchItemInteractor.swift; sourceTree = "<group>"; };
 		7D7F01D520252B7300D51963 /* SaveItemUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveItemUseCase.swift; sourceTree = "<group>"; };
 		7D7F01D720252B9A00D51963 /* DeleteItemUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteItemUseCase.swift; sourceTree = "<group>"; };
+		7D7F01DA2025347200D51963 /* FetchOnboardingStatusUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchOnboardingStatusUseCase.swift; sourceTree = "<group>"; };
+		7D7F01DC2025367200D51963 /* FetchOnboardingStatusInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchOnboardingStatusInteractor.swift; sourceTree = "<group>"; };
 		7DA12D0920201785000E1758 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA12D0C20201785000E1758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DA12D0E20201785000E1758 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +129,7 @@
 		7DA12D1620201785000E1758 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DA12D1820201785000E1758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DA12D1D20201786000E1758 /* DemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DA12D2120201786000E1758 /* DemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppTests.swift; sourceTree = "<group>"; };
+		7DA12D2120201786000E1758 /* RootPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenterTests.swift; sourceTree = "<group>"; };
 		7DA12D2320201786000E1758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DA12D2820201786000E1758 /* DemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA12D2C20201786000E1758 /* DemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppUITests.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 		7D507A542020F02300C96E48 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				7D7F01D92025341800D51963 /* FetchOnboardingStatusUseCase */,
 				7D7F01D420252B5A00D51963 /* SaveItemUseCase */,
 				7D7F01D320252B5200D51963 /* SaveListUseCase */,
 				7D7F01D220252B4900D51963 /* DeleteItemUseCase */,
@@ -349,6 +354,15 @@
 			path = SaveItemUseCase;
 			sourceTree = "<group>";
 		};
+		7D7F01D92025341800D51963 /* FetchOnboardingStatusUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				7D7F01DA2025347200D51963 /* FetchOnboardingStatusUseCase.swift */,
+				7D7F01DC2025367200D51963 /* FetchOnboardingStatusInteractor.swift */,
+			);
+			path = FetchOnboardingStatusUseCase;
+			sourceTree = "<group>";
+		};
 		7DA12D0020201785000E1758 = {
 			isa = PBXGroup;
 			children = (
@@ -387,7 +401,7 @@
 		7DA12D2020201786000E1758 /* DemoAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				7DA12D2120201786000E1758 /* DemoAppTests.swift */,
+				7DA12D2120201786000E1758 /* RootPresenterTests.swift */,
 				7DA12D2320201786000E1758 /* Info.plist */,
 			);
 			path = DemoAppTests;
@@ -606,6 +620,7 @@
 				7DE4C6B32022634800BB30EA /* ListRouter.swift in Sources */,
 				7DE4C6AF20225F2800BB30EA /* GridViewController.swift in Sources */,
 				7D507A7D202106F200C96E48 /* DetailModuleFactory.swift in Sources */,
+				7D7F01DB2025347200D51963 /* FetchOnboardingStatusUseCase.swift in Sources */,
 				7DE4C6B1202262B400BB30EA /* ListPresenter.swift in Sources */,
 				7D507A6F2020FEB700C96E48 /* ListViewContract.swift in Sources */,
 				7DE4C6A8202228DD00BB30EA /* RootRouter.swift in Sources */,
@@ -621,6 +636,7 @@
 				7D7F01C8202526AD00D51963 /* ListItemDataSource.swift in Sources */,
 				7D7F01C42025266000D51963 /* FetchListUseCase.swift in Sources */,
 				7D507A752021044900C96E48 /* DetailViewContract.swift in Sources */,
+				7D7F01DD2025367200D51963 /* FetchOnboardingStatusInteractor.swift in Sources */,
 				7D7F01AC2024FB2500D51963 /* ListRouterContract.swift in Sources */,
 				7D7F01BD202521D300D51963 /* ListItemModel.swift in Sources */,
 				7D507A5E2020FB3700C96E48 /* OnboardingViewController.swift in Sources */,
@@ -647,7 +663,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DA12D2220201786000E1758 /* DemoAppTests.swift in Sources */,
+				7DA12D2220201786000E1758 /* RootPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

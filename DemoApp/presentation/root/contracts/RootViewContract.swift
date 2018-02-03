@@ -1,10 +1,10 @@
 import Foundation
 
-protocol RootViewInput {
+@objc protocol RootViewInput {
     
 }
 
-protocol RootViewOutput {
+@objc protocol RootViewOutput {
     
     func viewDidLoad()
     

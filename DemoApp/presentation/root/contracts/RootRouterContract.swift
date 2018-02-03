@@ -1,12 +1,12 @@
 import Foundation
 
-protocol RootRouterInput {
+@objc protocol RootRouterInput {
     
     func goToNext()
     func goToOnboarding()
 
 }
 
-protocol RootRouterOutput {
+@objc protocol RootRouterOutput {
     
 }

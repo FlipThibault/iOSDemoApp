@@ -8,7 +8,9 @@ class RootModuleFactory {
         let vc = RootViewController()
         let router = RootRouter(vc)
         let presenter = RootPresenter()
+        let interactor = FetchOnboardingStatusInteractor()
         
+        presenter.interactor = interactor
         presenter.router = router
         vc.presenter = presenter
         
