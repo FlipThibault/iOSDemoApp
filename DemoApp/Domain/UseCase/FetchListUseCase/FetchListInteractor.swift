@@ -15,6 +15,9 @@ extension FetchListInteractor: FetchListUseCase {
     func fetchList(by id: String, with completion: (AppListModel) -> Void) {
         
         dataSource.get(by: id) { (list) in
+            
+            list.items.reverse()
+            
             completion(list)
         }
         

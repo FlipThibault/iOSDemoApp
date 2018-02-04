@@ -2,7 +2,8 @@ import Foundation
 
 protocol ListRouterInput {
  
-    func goToDetail(for id: String)
+    func goToDetail(with item: AppListItemModel, and list: AppListModel)
+    func goToAddView(with delegate: AddItemViewOutput)
     
 }
 

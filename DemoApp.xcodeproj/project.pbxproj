@@ -30,7 +30,6 @@
 		7D50D2A92024CBF1002FF60E /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50D2A82024CBF1002FF60E /* ListCellView.swift */; };
 		7D7F01AC2024FB2500D51963 /* ListRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01AB2024FB2500D51963 /* ListRouterContract.swift */; };
 		7D7F01B02025026100D51963 /* GridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01AF2025026100D51963 /* GridCellView.swift */; };
-		7D7F01B22025042E00D51963 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01B12025042E00D51963 /* DetailRouter.swift */; };
 		7D7F01B42025043700D51963 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01B32025043700D51963 /* DetailPresenter.swift */; };
 		7D7F01B6202504F200D51963 /* DetailRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01B5202504F200D51963 /* DetailRouterContract.swift */; };
 		7D7F01B8202508AD00D51963 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01B7202508AD00D51963 /* DetailView.swift */; };
@@ -70,6 +69,14 @@
 		7DD87F5F20268EF9008ED1AA /* ListViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F5E20268EF9008ED1AA /* ListViewDelegateDataSource.swift */; };
 		7DD87F61202693CC008ED1AA /* ListViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F60202693CC008ED1AA /* ListViewModelMapper.swift */; };
 		7DD87F63202694BF008ED1AA /* ListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F62202694BF008ED1AA /* ListItemViewModel.swift */; };
+		7DD87F6B20275C60008ED1AA /* AddItemViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F6A20275C60008ED1AA /* AddItemViewContract.swift */; };
+		7DD87F6D20275CEA008ED1AA /* AddItemModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F6C20275CEA008ED1AA /* AddItemModuleFactory.swift */; };
+		7DD87F7120275EE2008ED1AA /* AddItemRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F7020275EE2008ED1AA /* AddItemRouterContract.swift */; };
+		7DD87F7320277DFA008ED1AA /* AppListModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F7220277DFA008ED1AA /* AppListModelViewModel.swift */; };
+		7DD87F762027820E008ED1AA /* NSErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F752027820E008ED1AA /* NSErrorHelper.swift */; };
+		7DD87F782027830A008ED1AA /* AppListItemModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F772027830A008ED1AA /* AppListItemModelViewModel.swift */; };
+		7DD87F7B20278B83008ED1AA /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F7A20278B83008ED1AA /* DetailViewModel.swift */; };
+		7DD87F7D20278BF0008ED1AA /* AppListItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F7C20278BF0008ED1AA /* AppListItemDetailViewModel.swift */; };
 		7DE4C69920221AAD00BB30EA /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C69820221AAD00BB30EA /* OnboardingRouter.swift */; };
 		7DE4C69C20221B2400BB30EA /* OnboardingRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C69B20221B2400BB30EA /* OnboardingRouterContract.swift */; };
 		7DE4C6A1202221C400BB30EA /* RootModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C6A0202221C400BB30EA /* RootModuleFactory.swift */; };
@@ -131,7 +138,6 @@
 		7D50D2A82024CBF1002FF60E /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
 		7D7F01AB2024FB2500D51963 /* ListRouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterContract.swift; sourceTree = "<group>"; };
 		7D7F01AF2025026100D51963 /* GridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCellView.swift; sourceTree = "<group>"; };
-		7D7F01B12025042E00D51963 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		7D7F01B32025043700D51963 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		7D7F01B5202504F200D51963 /* DetailRouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouterContract.swift; sourceTree = "<group>"; };
 		7D7F01B7202508AD00D51963 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -177,6 +183,14 @@
 		7DD87F5E20268EF9008ED1AA /* ListViewDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDelegateDataSource.swift; sourceTree = "<group>"; };
 		7DD87F60202693CC008ED1AA /* ListViewModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelMapper.swift; sourceTree = "<group>"; };
 		7DD87F62202694BF008ED1AA /* ListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewModel.swift; sourceTree = "<group>"; };
+		7DD87F6A20275C60008ED1AA /* AddItemViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewContract.swift; sourceTree = "<group>"; };
+		7DD87F6C20275CEA008ED1AA /* AddItemModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemModuleFactory.swift; sourceTree = "<group>"; };
+		7DD87F7020275EE2008ED1AA /* AddItemRouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemRouterContract.swift; sourceTree = "<group>"; };
+		7DD87F7220277DFA008ED1AA /* AppListModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListModelViewModel.swift; sourceTree = "<group>"; };
+		7DD87F752027820E008ED1AA /* NSErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorHelper.swift; sourceTree = "<group>"; };
+		7DD87F772027830A008ED1AA /* AppListItemModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListItemModelViewModel.swift; sourceTree = "<group>"; };
+		7DD87F7A20278B83008ED1AA /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		7DD87F7C20278BF0008ED1AA /* AppListItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListItemDetailViewModel.swift; sourceTree = "<group>"; };
 		7DE4C69820221AAD00BB30EA /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 		7DE4C69B20221B2400BB30EA /* OnboardingRouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouterContract.swift; sourceTree = "<group>"; };
 		7DE4C6A0202221C400BB30EA /* RootModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModuleFactory.swift; sourceTree = "<group>"; };
@@ -245,7 +259,7 @@
 		7D507A532020F01800C96E48 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				7DD87F582026896E008ED1AA /* ViewModel */,
+				7DD87F64202755B9008ED1AA /* Add */,
 				7DD87F3E20263DEF008ED1AA /* App */,
 				7D507A5B2020FAAE00C96E48 /* Detail */,
 				7DE4C6AB20225EE600BB30EA /* Grid */,
@@ -300,6 +314,7 @@
 		7D507A5A2020FAA200C96E48 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				7DD87F582026896E008ED1AA /* ViewModel */,
 				7DE4C69E20221B9900BB30EA /* Contracts */,
 				7DD87F5E20268EF9008ED1AA /* ListViewDelegateDataSource.swift */,
 				7D507A7A202106D300C96E48 /* ListModuleFactory.swift */,
@@ -316,12 +331,12 @@
 		7D507A5B2020FAAE00C96E48 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				7DD87F7920278B76008ED1AA /* ViewModel */,
 				7DE4C69F20221BA500BB30EA /* Contracts */,
 				7D507A7C202106F200C96E48 /* DetailModuleFactory.swift */,
 				7D7F01B7202508AD00D51963 /* DetailView.swift */,
 				7D507A632020FBD700C96E48 /* DetailViewController.swift */,
 				7D7F01B32025043700D51963 /* DetailPresenter.swift */,
-				7D7F01B12025042E00D51963 /* DetailRouter.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -507,6 +522,7 @@
 		7DD87F3E20263DEF008ED1AA /* App */ = {
 			isa = PBXGroup;
 			children = (
+				7DD87F7420278200008ED1AA /* Helper */,
 				7DA12D0C20201785000E1758 /* AppDelegate.swift */,
 			);
 			path = App;
@@ -548,6 +564,8 @@
 			children = (
 				7DD87F5C20268E8C008ED1AA /* ListViewModel.swift */,
 				7DD87F62202694BF008ED1AA /* ListItemViewModel.swift */,
+				7DD87F7220277DFA008ED1AA /* AppListModelViewModel.swift */,
+				7DD87F772027830A008ED1AA /* AppListItemModelViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -558,6 +576,41 @@
 				7DD87F5A20268C31008ED1AA /* FakeListData.swift */,
 			);
 			path = FakeData;
+			sourceTree = "<group>";
+		};
+		7DD87F64202755B9008ED1AA /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				7DD87F6920275C53008ED1AA /* Contract */,
+				7DD87F6C20275CEA008ED1AA /* AddItemModuleFactory.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		7DD87F6920275C53008ED1AA /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				7DD87F6A20275C60008ED1AA /* AddItemViewContract.swift */,
+				7DD87F7020275EE2008ED1AA /* AddItemRouterContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		7DD87F7420278200008ED1AA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7DD87F752027820E008ED1AA /* NSErrorHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		7DD87F7920278B76008ED1AA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7DD87F7A20278B83008ED1AA /* DetailViewModel.swift */,
+				7DD87F7C20278BF0008ED1AA /* AppListItemDetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7DE4C69A20221B0500BB30EA /* Contracts */ = {
@@ -899,7 +952,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DA12D0F20201785000E1758 /* RootViewController.swift in Sources */,
-				7D7F01B22025042E00D51963 /* DetailRouter.swift in Sources */,
 				7DE4C69920221AAD00BB30EA /* OnboardingRouter.swift in Sources */,
 				7D507A772021063300C96E48 /* OnboardingModuleFactory.swift in Sources */,
 				7DA12D0D20201785000E1758 /* AppDelegate.swift in Sources */,
@@ -908,6 +960,7 @@
 				7DE4C6AD20225EF800BB30EA /* GridModuleFactory.swift in Sources */,
 				7D507A622020FBC400C96E48 /* ListViewController.swift in Sources */,
 				7D7F01B02025026100D51963 /* GridCellView.swift in Sources */,
+				7DD87F7D20278BF0008ED1AA /* AppListItemDetailViewModel.swift in Sources */,
 				7DE4C6B32022634800BB30EA /* ListRouter.swift in Sources */,
 				7D7F01E72025421F00D51963 /* SetOnboardingStatusInteractor.swift in Sources */,
 				7DE4C6AF20225F2800BB30EA /* GridViewController.swift in Sources */,
@@ -941,24 +994,31 @@
 				7DD87F55202685AA008ED1AA /* DeleteItemInteractor.swift in Sources */,
 				7D7F01BD202521D300D51963 /* ListItemModel.swift in Sources */,
 				7D507A5E2020FB3700C96E48 /* OnboardingViewController.swift in Sources */,
+				7DD87F6B20275C60008ED1AA /* AddItemViewContract.swift in Sources */,
+				7DD87F7120275EE2008ED1AA /* AddItemRouterContract.swift in Sources */,
 				7DD87F5720268677008ED1AA /* SaveItemInteractor.swift in Sources */,
 				7D50D2A92024CBF1002FF60E /* ListCellView.swift in Sources */,
 				7D7F01DF20253F0F00D51963 /* KeyValueDataSource.swift in Sources */,
+				7DD87F7320277DFA008ED1AA /* AppListModelViewModel.swift in Sources */,
 				7D7F01E220253F6800D51963 /* NSUserDefaultDataSource.swift in Sources */,
+				7DD87F7B20278B83008ED1AA /* DetailViewModel.swift in Sources */,
 				7D7F01CE20252B2000D51963 /* FetchItemInteractor.swift in Sources */,
 				7DD87F5F20268EF9008ED1AA /* ListViewDelegateDataSource.swift in Sources */,
 				7DD87F63202694BF008ED1AA /* ListItemViewModel.swift in Sources */,
+				7DD87F762027820E008ED1AA /* NSErrorHelper.swift in Sources */,
 				7D507A7B202106D300C96E48 /* ListModuleFactory.swift in Sources */,
 				7D50D2962022710A002FF60E /* GridView.swift in Sources */,
 				7D7F01C22025262C00D51963 /* FetchItemUseCase.swift in Sources */,
 				7D507A662020FC1600C96E48 /* OnboardingView.swift in Sources */,
 				7D7F01C62025269F00D51963 /* ListDataSource.swift in Sources */,
+				7DD87F782027830A008ED1AA /* AppListItemModelViewModel.swift in Sources */,
 				7DD87F61202693CC008ED1AA /* ListViewModelMapper.swift in Sources */,
 				7DE4C69C20221B2400BB30EA /* OnboardingRouterContract.swift in Sources */,
 				7D50D28E202265D6002FF60E /* ListView.swift in Sources */,
 				7D507A602020FBAE00C96E48 /* TabViewController.swift in Sources */,
 				7DE4C6AA2022294700BB30EA /* RootRouterContract.swift in Sources */,
 				7D7F01B8202508AD00D51963 /* DetailView.swift in Sources */,
+				7DD87F6D20275CEA008ED1AA /* AddItemModuleFactory.swift in Sources */,
 				7D7F01BB202521CB00D51963 /* ListModel.swift in Sources */,
 				7DD87F3B202625C1008ED1AA /* DataStoreConfigurator.swift in Sources */,
 				7D7F01D820252B9A00D51963 /* DeleteItemUseCase.swift in Sources */,

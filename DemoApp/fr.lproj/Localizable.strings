@@ -6,3 +6,9 @@
 "action.navigation.edit" = "Modifier";
 "action.navigation.add" = "Ajouter";
 "action.navigation.done" = "Sauv.";
+
+"add.alert.title" = "Ajouter un Item";
+"add.alert.message" = "Entrez la description de l\'item que vous voulez ajouter";
+
+"alert.action.save" = "Sauvegarder";
+"alert.action.cancel" = "Annuler";

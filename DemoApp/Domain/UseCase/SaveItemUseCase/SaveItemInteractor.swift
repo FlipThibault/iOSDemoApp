@@ -12,10 +12,16 @@ class SaveItemInteractor: NSObject {
 
 extension SaveItemInteractor: SaveItemUseCase {
     
-    func saveItem(item: AppListItemModel, to list: AppListModel, with completion: (Bool) -> Void) {
+    func saveItem(item: AppListItemModel, to list: AppListModel, with completion: (AppListModel, NSError?) -> Void) {
 
+        list.items.insert(item, at: 0)
+        
         dataSource.save(with: item) { (success) in
-            completion(success)
+            if(success) {
+                completion(list, nil)
+            } else {
+                completion(list, NSError(with: Constants.ErrorMessages.dataSourceSaveError))
+            }
         }
         
     }

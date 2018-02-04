@@ -54,25 +54,12 @@ class ListViewController : UIViewController {
         navigationItem.rightBarButtonItems = [editBtn, addBtn]
     }
 
-    //Move to presenter
     @objc func edit(_ sender : UIBarButtonItem) {
-        listView.setEditing(!listView.isEditing, animated: true)
-
-        if listView.isEditing {
-            listView.setEditing(true, animated: true)
-            sender.title = NSLocalizedString("action.navigation.done", comment: "")
-            navigationItem.rightBarButtonItems = [editBtn]
-        }
-        else {
-            listView.setEditing(false, animated: true)
-            sender.title = NSLocalizedString("action.navigation.edit", comment: "")
-            navigationItem.rightBarButtonItems = [editBtn, addBtn]
-        }
+        presenter?.toggleEditMode()
     }
     
-    //move to presenter
     @objc func add(_ sender : UIBarButtonItem) {
-        
+        presenter?.addItemRequested()
     }
     
     lazy var addBtn: UIBarButtonItem = {
@@ -88,8 +75,19 @@ class ListViewController : UIViewController {
 
 extension ListViewController: ListViewInput {
     
-    func populateView(listViewModel: ListViewModel) {
+    func populateViewWithData(listViewModel: ListViewModel) {
         self.listView.reloadData()
+    }
+    
+    func setEditMode(isEditing: Bool) {
+        listView.setEditing(isEditing, animated: true)
+        if isEditing {
+            editBtn.title = NSLocalizedString("action.navigation.done", comment: "")
+            navigationItem.rightBarButtonItems = [editBtn]
+        } else {
+            editBtn.title = NSLocalizedString("action.navigation.edit", comment: "")
+            navigationItem.rightBarButtonItems = [editBtn, addBtn]
+        }
     }
     
 }

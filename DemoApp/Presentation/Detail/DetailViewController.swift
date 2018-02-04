@@ -28,10 +28,16 @@ class DetailViewController : UIViewController {
             self.detailView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             self.detailView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
         ])
+        
+        self.presenter?.isLoaded()
     }
     
 }
 
 extension DetailViewController : DetailViewInput {
+    
+    func displayData(itemViewModel: DetailViewModel) {
+        self.detailView.textField.text = itemViewModel.getText()
+    }
     
 }

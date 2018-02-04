@@ -2,12 +2,16 @@ import Foundation
 
 protocol ListViewInput: NSObjectProtocol {
     
-    func populateView(listViewModel: ListViewModel)
+    func populateViewWithData(listViewModel: ListViewModel)
+    func setEditMode(isEditing: Bool)
     
 }
 
 protocol ListViewOutput: NSObjectProtocol {
     
     func isLoaded()
+    
+    func addItemRequested()
+    func toggleEditMode()
     
 }

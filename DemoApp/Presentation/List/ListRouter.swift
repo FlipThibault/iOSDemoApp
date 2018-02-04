@@ -13,11 +13,19 @@ class ListRouter {
 
 extension ListRouter : ListRouterInput {
     
-    func goToDetail(for id: String) {
+    func goToDetail(with item: AppListItemModel, and list: AppListModel) {
         
-        let detailVC = DetailModuleFactory.buildModule(with: id)
+        let detailVC = DetailModuleFactory.buildModule(with: item, and: list)
         
         vc?.navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    func goToAddView(with delegate: AddItemViewOutput) {
+        
+        let addVc = AddItemModuleFactory.buildModule(with: delegate)
+        
+        vc?.present(addVc, animated: true, completion: nil)
+        
     }
     
 }

@@ -2,16 +2,14 @@ import Foundation
 
 class DetailModuleFactory {
     
-    static func buildModule(with id: String) -> DetailViewController {
+    static func buildModule(with item: AppListItemModel, and list: AppListModel) -> DetailViewController {
         
         let view = DetailView()
-        let router = DetailRouter()
-            
-        let presenter = DetailPresenter(with: id)
         
+        let presenter = DetailPresenter(with: item, and: list)
         let vc = DetailViewController(with: view)
-
-        presenter.router = router
+        
+        presenter.view = vc
         vc.presenter = presenter
         
         return vc

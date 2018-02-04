@@ -24,6 +24,7 @@ class ListModuleFactory {
         presenter.deleteItemUseCase = deleteItemUseCase
         presenter.saveItemUseCase = saveItemUseCase
         presenter.fetchListUseCase = fetchListUseCase
+        presenter.view = vc
         
         vc.presenter = presenter
         

@@ -28,15 +28,15 @@ extension ListViewDelegateDataSource : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataProvider.getData()?.items.count ?? 0
+        return dataProvider.getData()?.getDisplayItems().count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCellIdentifier.listCellView, for: indexPath) as? ListCellView else {
             fatalError(Constants.ErrorMessages.cellTypeNotRegistered)
         }
-        if let items = dataProvider.getData()?.items {
-            cell.titleLabel.text = items[indexPath.row].displayText
+        if let items = dataProvider.getData()?.getDisplayItems() {
+            cell.titleLabel.text = items[indexPath.row].getDisplayText()
         }
         return cell
     }

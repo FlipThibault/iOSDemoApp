@@ -6,3 +6,9 @@
 "action.navigation.edit" = "Edit";
 "action.navigation.add" = "Add";
 "action.navigation.done" = "Done";
+
+"add.alert.title" = "Add Item";
+"add.alert.message" = "Enter the description of the item you want to add";
+
+"alert.action.save" = "Save";
+"alert.action.cancel" = "Cancel";
