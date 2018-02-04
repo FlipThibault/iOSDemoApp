@@ -1,11 +1,13 @@
 import Foundation
 
-protocol ListViewInput {
+protocol ListViewInput: NSObjectProtocol {
+    
+    func populateView(listViewModel: ListViewModel)
     
 }
 
-protocol ListViewOutput {
+protocol ListViewOutput: NSObjectProtocol {
     
-    func didClickCellAtIndex(indexPath: IndexPath)
+    func isLoaded()
     
 }

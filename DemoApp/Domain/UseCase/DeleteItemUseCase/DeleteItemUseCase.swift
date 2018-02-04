@@ -1,5 +1,5 @@
 import Foundation
 
 protocol DeleteItemUseCase {
-    func deleteItem(by identifier: String/*, with completion: SomeCompletion*/)
+    func deleteItem(item: AppListItemModel, from list: AppListModel, with completion: (Bool) -> Void)
 }

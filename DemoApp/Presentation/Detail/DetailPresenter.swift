@@ -4,11 +4,10 @@ class DetailPresenter : NSObject {
     
     let id: String
     weak var view : DetailViewInput?
-    let router: DetailRouterInput
+    var router: DetailRouterInput?
     
-    init(with id: String, with router : DetailRouterInput) {
+    init(with id: String) {
         self.id = id
-        self.router = router
     }
     
 }

@@ -1,5 +1,5 @@
 import Foundation
 
 protocol SaveItemUseCase {
-    func saveItem(/*somemodel, with completion: SomeCompletion*/)
+    func saveItem(item: AppListItemModel, to list: AppListModel, with completion: (Bool) -> Void)
 }

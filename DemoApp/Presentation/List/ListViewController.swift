@@ -4,12 +4,12 @@ import UIKit
 class ListViewController : UIViewController {
     
     var presenter: ListViewOutput?
+    var delegateDataSource: ListViewDelegateDataSource
     private var listView: ListView
     
-    private let myArray: NSArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
-    
-    init(with view: ListView) {
+    init(with view: ListView, and delegateDataSource: ListViewDelegateDataSource) {
         self.listView = view
+        self.delegateDataSource = delegateDataSource
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -23,11 +23,13 @@ class ListViewController : UIViewController {
         setupTableView()
         setupConstraints()
         setupNavigationBarActions()
+        
+        self.presenter?.isLoaded()
     }
     
     private func setupTableView() {
-        self.listView.dataSource = self
-        self.listView.delegate = self
+        self.listView.dataSource = delegateDataSource
+        self.listView.delegate = delegateDataSource
         self.view.addSubview(listView)
         
         listView.register(ListCellView.self, forCellReuseIdentifier: Constants.TableViewCellIdentifier.listCellView)
@@ -70,7 +72,7 @@ class ListViewController : UIViewController {
     
     //move to presenter
     @objc func add(_ sender : UIBarButtonItem) {
-
+        
     }
     
     lazy var addBtn: UIBarButtonItem = {
@@ -84,36 +86,10 @@ class ListViewController : UIViewController {
     }()
 }
 
-extension ListViewController : UITableViewDataSource {
+extension ListViewController: ListViewInput {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCellIdentifier.listCellView, for: indexPath) as? ListCellView else {
-            fatalError(Constants.ErrorMessages.cellTypeNotRegistered)
-        }
-        cell.titleLabel.text = "\(myArray[indexPath.row])"
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    
-}
-
-extension ListViewController : UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        presenter?.didClickCellAtIndex(indexPath: indexPath)
+    func populateView(listViewModel: ListViewModel) {
+        self.listView.reloadData()
     }
     
 }

@@ -9,7 +9,7 @@ class RootPresenter: NSObject {
 
 extension RootPresenter : RootViewOutput {
     
-    func load() {
+    func isLoaded() {
         
         interactor?.shouldShowOnboarding({ (hasSeenOnboarding) in
             if(hasSeenOnboarding) {

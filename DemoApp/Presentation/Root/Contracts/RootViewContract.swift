@@ -6,6 +6,6 @@ import Foundation
 
 @objc protocol RootViewOutput {
     
-    func load()
+    func isLoaded()
     
 }

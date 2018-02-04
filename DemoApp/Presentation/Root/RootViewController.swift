@@ -6,7 +6,7 @@ class RootViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.load()
+        presenter?.isLoaded()
     }
 
 }
