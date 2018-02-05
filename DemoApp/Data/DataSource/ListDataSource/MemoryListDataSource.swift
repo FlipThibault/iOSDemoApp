@@ -8,7 +8,7 @@ class MemoryListDataSource: NSObject {
         self.newList = AppListModel(with: fakeList.name)
         newList.identifier = fakeList.identifier
         newList.items = []
-        for (key, value) in fakeList.items.enumerated() {
+        for value in fakeList.items {
             let item = AppListItemModel()
             item.identifier = value.identifier
             item.description = value.description

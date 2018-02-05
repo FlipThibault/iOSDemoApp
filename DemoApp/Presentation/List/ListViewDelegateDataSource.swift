@@ -64,7 +64,7 @@ extension ListViewDelegateDataSource : UITableViewDelegate {
             self.interactionHandler.onItemDelete(at: indexPath)
         }
     }
-    
+        
     func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
         return 0
     }

@@ -4,12 +4,15 @@ import Foundation
 
 let fakeList: AppListModel = {
     
+    let lowerBounds = 1
+    let upperBounds = 2
+    
     let testList = AppListModel(with: "TestList")
     
-    for index in 1...15 {
+    for index in lowerBounds...upperBounds {
         let item = AppListItemModel()
         item.description = String(index)
-        testList.items.append(item)
+//        testList.items.append(item)
     }
     
     return testList

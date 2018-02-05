@@ -15,3 +15,5 @@
 
 "error.emtpyitem.title" = "Description Vide!";
 "error.emtpyitem.message" = "Vous ne pouvez pas sauvegarder un item avec une description vide";
+
+"list.empty.message" = "Vous n\'avez pas d\'items 😢";

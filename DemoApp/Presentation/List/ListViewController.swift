@@ -22,7 +22,6 @@ class ListViewController : UIViewController {
         
         setupTableView()
         setupConstraints()
-        setupNavigationBarActions()
         
         self.presenter?.isLoaded()
     }
@@ -32,6 +31,8 @@ class ListViewController : UIViewController {
         self.listView.delegate = delegateDataSource
         self.view.addSubview(listView)
         
+        self.listView.backgroundView = ListViewEmptyView(with: NSLocalizedString("list.empty.message", comment: ""))
+
         listView.register(ListCellView.self, forCellReuseIdentifier: Constants.TableViewCellIdentifier.listCellView)
     }
     
@@ -48,10 +49,6 @@ class ListViewController : UIViewController {
             
         ])
         
-    }
-    
-    private func setupNavigationBarActions() {
-        navigationItem.rightBarButtonItems = [editBtn, addBtn]
     }
 
     @objc func edit(_ sender : UIBarButtonItem) {
@@ -94,15 +91,29 @@ extension ListViewController: ListViewInput {
         self.present(errorAlert, animated: true, completion: {})
         
     }
+    
+    func showEmptyView() {
+        UIView.animate(withDuration: 1.0) {
+            self.listView.backgroundView?.alpha = 1.0
+        }
+        navigationItem.setRightBarButtonItems([addBtn], animated: true)
+    }
+    
+    func hideEmptyView() {
+        UIView.animate(withDuration: 0.5) {
+            self.listView.backgroundView?.alpha = 0.0
+        }
+        navigationItem.setRightBarButtonItems([editBtn, addBtn], animated: true)
+    }
 
     func setEditMode(isEditing: Bool) {
         listView.setEditing(isEditing, animated: true)
         if isEditing {
             editBtn.title = NSLocalizedString("action.navigation.done", comment: "")
-            navigationItem.rightBarButtonItems = [editBtn]
+            navigationItem.setRightBarButtonItems([editBtn], animated: true)
         } else {
             editBtn.title = NSLocalizedString("action.navigation.edit", comment: "")
-            navigationItem.rightBarButtonItems = [editBtn, addBtn]
+            navigationItem.setRightBarButtonItems([editBtn, addBtn], animated: true)
         }
     }
     

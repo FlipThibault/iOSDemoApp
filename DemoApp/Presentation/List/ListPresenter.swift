@@ -29,7 +29,11 @@ extension ListPresenter: ListViewOutput {
         fetchListUseCase?.fetchList(by: "", with: { (appListModel, error) in
             self.listModel = appListModel
             self.updateViewModel()
-            self.view?.populateViewWithData()
+            if(self.listModel?.items.count == 0) {
+                self.view?.showEmptyView()
+            } else {
+                self.view?.populateViewWithData()
+            }
         })
     }
     
@@ -67,6 +71,10 @@ extension ListPresenter: ListViewInteractionHandler {
             deleteItemUseCase?.deleteItem(item: items[indexPath.row], from: list, with: { (appListItem, success) in
                 self.updateViewModel()
                 self.view?.notifyItemRemoved(at: IndexPath(row: indexPath.row, section: 0))
+                if(self.listModel?.items.count == 0) {
+                    self.toggleEditMode()
+                    self.view?.showEmptyView()
+                }
             })
         }
     }
@@ -94,6 +102,9 @@ extension ListPresenter: AddItemViewModuleDelegate {
         if let row = self.listModel?.items.index(of: item) {
             updateViewModel()
             self.view?.notifyItemAdded(at: IndexPath(row: row, section: 0))
+            if(self.listModel?.items.count == 1) {
+                self.view?.hideEmptyView()
+            }
         }
     }
     

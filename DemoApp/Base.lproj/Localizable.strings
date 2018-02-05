@@ -15,3 +15,5 @@
 
 "error.emtpyitem.title" = "Empty Description!";
 "error.emtpyitem.message" = "You may not enter an item with an empty description";
+
+"list.empty.message" = "You have no items 😢";
