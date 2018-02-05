@@ -12,3 +12,6 @@
 
 "alert.action.save" = "Save";
 "alert.action.cancel" = "Cancel";
+
+"error.emtpyitem.title" = "Empty Description!";
+"error.emtpyitem.message" = "You may not enter an item with an empty description";

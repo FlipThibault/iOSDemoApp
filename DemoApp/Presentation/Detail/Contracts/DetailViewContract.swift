@@ -9,5 +9,7 @@ protocol DetailViewInput : NSObjectProtocol {
 protocol DetailViewOutput : NSObjectProtocol {
     
     func isLoaded()
+    func updateText(text: String)
+    func isDismissing()
 
 }

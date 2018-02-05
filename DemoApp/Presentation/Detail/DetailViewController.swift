@@ -32,12 +32,20 @@ class DetailViewController : UIViewController {
         self.presenter?.isLoaded()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.presenter?.isDismissing()
+    }
+    
+    @objc private func textChanged(_ sender: UITextField) {
+        presenter?.updateText(text: sender.text ?? "")
+    }
 }
 
 extension DetailViewController : DetailViewInput {
     
     func displayData(itemViewModel: DetailViewModel) {
         self.detailView.textField.text = itemViewModel.getText()
+        self.detailView.textField.addTarget(self, action: #selector(textChanged(_:)), for: .editingChanged)
     }
     
 }

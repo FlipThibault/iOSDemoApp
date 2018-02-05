@@ -1,33 +1,28 @@
 import Foundation
 import UIKit
 
+protocol AddItemViewModuleDelegate {
+    func notifyItemAdded(item: AppListItemModel)
+    func notifyItemAddedError(item: AppListItemModel, error: NSError?)
+}
+
 class AddItemModuleFactory {
     
-    static func buildModule(with delegate: AddItemViewOutput) -> UIViewController {
+    static func buildModule(with delegate: AddItemViewModuleDelegate, and list: AppListModel) -> UIViewController {
         
-        let vc = UIAlertController(title: NSLocalizedString("add.alert.title", comment: ""),
+        let vc = AddItemViewController(title: NSLocalizedString("add.alert.title", comment: ""),
                                    message: NSLocalizedString("add.alert.message", comment: ""),
                                    preferredStyle: .alert)
-
-        let saveAction = UIAlertAction(title: NSLocalizedString("alert.action.save", comment: ""),
-                                       style: UIAlertActionStyle.default) { (action: UIAlertAction) in
-                                        if let alertTextField = vc.textFields?.first {
-                                            delegate.didClickAddAction(with: alertTextField.text ?? "")
-                                        }
-                                    }
-
-        let cancelAction = UIAlertAction(title: NSLocalizedString("alert.action.cancel", comment: ""),
-                                         style: UIAlertActionStyle.cancel) { (action: UIAlertAction) in
-                                            delegate.didClickCancelAction()
-                                        }
-
         
-    
-        vc.addTextField { (textField: UITextField) in
-        }
+        vc.configure()
         
-        vc.addAction(saveAction)
-        vc.addAction(cancelAction)
+        let presenter = AddItemPresenter(with: list)
+        let listItemDataSource = MemoryListItemDataSource()
+        let saveItemUseCase = SaveItemInteractor(with: listItemDataSource)
+        presenter.moduleDelegate = delegate
+        presenter.saveItemUseCase = saveItemUseCase
+        
+        vc.presenter = presenter
         
         return vc
         

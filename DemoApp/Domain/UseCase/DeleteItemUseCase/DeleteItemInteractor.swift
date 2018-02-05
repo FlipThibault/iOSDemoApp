@@ -12,11 +12,22 @@ class DeleteItemInteractor: NSObject {
 
 extension DeleteItemInteractor: DeleteItemUseCase {
     
-    func deleteItem(item: AppListItemModel, from list: AppListModel, with completion: (Bool) -> Void) {
+    func deleteItem(item: AppListItemModel, from list: AppListModel, with completion:  @escaping (AppListItemModel, NSError?) -> Void) {
         
-        dataSource.delete(by: item.identifier) { (success) in
-            completion(success)
+        if let index = list.items.index(of: item) {
+            list.items.remove(at: index)
+            
+            completion(item, nil)
+            
+            dataSource.delete(by: item.identifier) { (error) in
+                if error != nil {
+                    completion(item, error)
+                }
+            }
+        } else {
+            completion(item, NSError(with: Constants.ErrorMessages.itemNotFoundInCollection))
         }
+        
     }
     
 }

@@ -18,6 +18,7 @@ struct Constants {
         static let notImplementedInitWithCoder = "init(coder:) has not been implemented"
         static let cellTypeNotRegistered = "cell type not registered"
         static let dataSourceSaveError = "Error saving to data source"
+        static let itemNotFoundInCollection = "Item not found in collection"
     }
     
     struct CoreData {

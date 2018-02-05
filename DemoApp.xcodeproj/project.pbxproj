@@ -31,7 +31,6 @@
 		7D7F01AC2024FB2500D51963 /* ListRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01AB2024FB2500D51963 /* ListRouterContract.swift */; };
 		7D7F01B02025026100D51963 /* GridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01AF2025026100D51963 /* GridCellView.swift */; };
 		7D7F01B42025043700D51963 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01B32025043700D51963 /* DetailPresenter.swift */; };
-		7D7F01B6202504F200D51963 /* DetailRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01B5202504F200D51963 /* DetailRouterContract.swift */; };
 		7D7F01B8202508AD00D51963 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01B7202508AD00D51963 /* DetailView.swift */; };
 		7D7F01BB202521CB00D51963 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01BA202521CB00D51963 /* ListModel.swift */; };
 		7D7F01BD202521D300D51963 /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01BC202521D300D51963 /* ListItemModel.swift */; };
@@ -48,6 +47,8 @@
 		7D7F01E220253F6800D51963 /* NSUserDefaultDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01E120253F6800D51963 /* NSUserDefaultDataSource.swift */; };
 		7D7F01E4202541FE00D51963 /* SetOnboardingStatusUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01E3202541FE00D51963 /* SetOnboardingStatusUseCase.swift */; };
 		7D7F01E72025421F00D51963 /* SetOnboardingStatusInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F01E62025421F00D51963 /* SetOnboardingStatusInteractor.swift */; };
+		7D89A9B92028E50D00C04852 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D89A9B82028E50D00C04852 /* ErrorViewModel.swift */; };
+		7D89A9BB2028E60E00C04852 /* EmptyItemDescriptionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D89A9BA2028E60E00C04852 /* EmptyItemDescriptionError.swift */; };
 		7DA12D0D20201785000E1758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D0C20201785000E1758 /* AppDelegate.swift */; };
 		7DA12D0F20201785000E1758 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA12D0E20201785000E1758 /* RootViewController.swift */; };
 		7DA12D1420201785000E1758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA12D1320201785000E1758 /* Assets.xcassets */; };
@@ -71,12 +72,15 @@
 		7DD87F63202694BF008ED1AA /* ListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F62202694BF008ED1AA /* ListItemViewModel.swift */; };
 		7DD87F6B20275C60008ED1AA /* AddItemViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F6A20275C60008ED1AA /* AddItemViewContract.swift */; };
 		7DD87F6D20275CEA008ED1AA /* AddItemModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F6C20275CEA008ED1AA /* AddItemModuleFactory.swift */; };
-		7DD87F7120275EE2008ED1AA /* AddItemRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F7020275EE2008ED1AA /* AddItemRouterContract.swift */; };
 		7DD87F7320277DFA008ED1AA /* AppListModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F7220277DFA008ED1AA /* AppListModelViewModel.swift */; };
 		7DD87F762027820E008ED1AA /* NSErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F752027820E008ED1AA /* NSErrorHelper.swift */; };
 		7DD87F782027830A008ED1AA /* AppListItemModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F772027830A008ED1AA /* AppListItemModelViewModel.swift */; };
 		7DD87F7B20278B83008ED1AA /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F7A20278B83008ED1AA /* DetailViewModel.swift */; };
 		7DD87F7D20278BF0008ED1AA /* AppListItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F7C20278BF0008ED1AA /* AppListItemDetailViewModel.swift */; };
+		7DD87F80202795D7008ED1AA /* UpdateItemUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F7F202795D7008ED1AA /* UpdateItemUseCase.swift */; };
+		7DD87F82202795EC008ED1AA /* UpdateItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F81202795EC008ED1AA /* UpdateItemInteractor.swift */; };
+		7DD87F842028BD79008ED1AA /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F832028BD79008ED1AA /* AddItemViewController.swift */; };
+		7DD87F862028C04C008ED1AA /* AddItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD87F852028C04C008ED1AA /* AddItemPresenter.swift */; };
 		7DE4C69920221AAD00BB30EA /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C69820221AAD00BB30EA /* OnboardingRouter.swift */; };
 		7DE4C69C20221B2400BB30EA /* OnboardingRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C69B20221B2400BB30EA /* OnboardingRouterContract.swift */; };
 		7DE4C6A1202221C400BB30EA /* RootModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE4C6A0202221C400BB30EA /* RootModuleFactory.swift */; };
@@ -139,7 +143,6 @@
 		7D7F01AB2024FB2500D51963 /* ListRouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterContract.swift; sourceTree = "<group>"; };
 		7D7F01AF2025026100D51963 /* GridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCellView.swift; sourceTree = "<group>"; };
 		7D7F01B32025043700D51963 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
-		7D7F01B5202504F200D51963 /* DetailRouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouterContract.swift; sourceTree = "<group>"; };
 		7D7F01B7202508AD00D51963 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		7D7F01BA202521CB00D51963 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		7D7F01BC202521D300D51963 /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 		7D7F01E120253F6800D51963 /* NSUserDefaultDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultDataSource.swift; sourceTree = "<group>"; };
 		7D7F01E3202541FE00D51963 /* SetOnboardingStatusUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetOnboardingStatusUseCase.swift; sourceTree = "<group>"; };
 		7D7F01E62025421F00D51963 /* SetOnboardingStatusInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetOnboardingStatusInteractor.swift; sourceTree = "<group>"; };
+		7D89A9B82028E50D00C04852 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
+		7D89A9BA2028E60E00C04852 /* EmptyItemDescriptionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyItemDescriptionError.swift; sourceTree = "<group>"; };
 		7DA12D0920201785000E1758 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA12D0C20201785000E1758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DA12D0E20201785000E1758 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -185,12 +190,15 @@
 		7DD87F62202694BF008ED1AA /* ListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewModel.swift; sourceTree = "<group>"; };
 		7DD87F6A20275C60008ED1AA /* AddItemViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewContract.swift; sourceTree = "<group>"; };
 		7DD87F6C20275CEA008ED1AA /* AddItemModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemModuleFactory.swift; sourceTree = "<group>"; };
-		7DD87F7020275EE2008ED1AA /* AddItemRouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemRouterContract.swift; sourceTree = "<group>"; };
 		7DD87F7220277DFA008ED1AA /* AppListModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListModelViewModel.swift; sourceTree = "<group>"; };
 		7DD87F752027820E008ED1AA /* NSErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorHelper.swift; sourceTree = "<group>"; };
 		7DD87F772027830A008ED1AA /* AppListItemModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListItemModelViewModel.swift; sourceTree = "<group>"; };
 		7DD87F7A20278B83008ED1AA /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		7DD87F7C20278BF0008ED1AA /* AppListItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListItemDetailViewModel.swift; sourceTree = "<group>"; };
+		7DD87F7F202795D7008ED1AA /* UpdateItemUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemUseCase.swift; sourceTree = "<group>"; };
+		7DD87F81202795EC008ED1AA /* UpdateItemInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemInteractor.swift; sourceTree = "<group>"; };
+		7DD87F832028BD79008ED1AA /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		7DD87F852028C04C008ED1AA /* AddItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemPresenter.swift; sourceTree = "<group>"; };
 		7DE4C69820221AAD00BB30EA /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 		7DE4C69B20221B2400BB30EA /* OnboardingRouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouterContract.swift; sourceTree = "<group>"; };
 		7DE4C6A0202221C400BB30EA /* RootModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModuleFactory.swift; sourceTree = "<group>"; };
@@ -334,9 +342,9 @@
 				7DD87F7920278B76008ED1AA /* ViewModel */,
 				7DE4C69F20221BA500BB30EA /* Contracts */,
 				7D507A7C202106F200C96E48 /* DetailModuleFactory.swift */,
+				7D7F01B32025043700D51963 /* DetailPresenter.swift */,
 				7D7F01B7202508AD00D51963 /* DetailView.swift */,
 				7D507A632020FBD700C96E48 /* DetailViewController.swift */,
-				7D7F01B32025043700D51963 /* DetailPresenter.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -454,6 +462,15 @@
 			path = SetOnboardingStatusUseCase;
 			sourceTree = "<group>";
 		};
+		7D89A9B72028E50400C04852 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				7D89A9B82028E50D00C04852 /* ErrorViewModel.swift */,
+				7D89A9BA2028E60E00C04852 /* EmptyItemDescriptionError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		7DA12D0020201785000E1758 = {
 			isa = PBXGroup;
 			children = (
@@ -522,6 +539,7 @@
 		7DD87F3E20263DEF008ED1AA /* App */ = {
 			isa = PBXGroup;
 			children = (
+				7D89A9B72028E50400C04852 /* Error */,
 				7DD87F7420278200008ED1AA /* Helper */,
 				7DA12D0C20201785000E1758 /* AppDelegate.swift */,
 			);
@@ -549,12 +567,13 @@
 		7DD87F5320268377008ED1AA /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				7D7F01E52025420300D51963 /* SetOnboardingStatusUseCase */,
+				7D7F01D220252B4900D51963 /* DeleteItemUseCase */,
+				7D7F01CF20252B2400D51963 /* FetchItemUseCase */,
+				7D7F01D020252B3800D51963 /* FetchListUseCase */,
 				7D7F01D92025341800D51963 /* FetchOnboardingStatusUseCase */,
 				7D7F01D420252B5A00D51963 /* SaveItemUseCase */,
-				7D7F01D220252B4900D51963 /* DeleteItemUseCase */,
-				7D7F01D020252B3800D51963 /* FetchListUseCase */,
-				7D7F01CF20252B2400D51963 /* FetchItemUseCase */,
+				7D7F01E52025420300D51963 /* SetOnboardingStatusUseCase */,
+				7DD87F7E202795BF008ED1AA /* UpdateItemUseCase */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -583,6 +602,8 @@
 			children = (
 				7DD87F6920275C53008ED1AA /* Contract */,
 				7DD87F6C20275CEA008ED1AA /* AddItemModuleFactory.swift */,
+				7DD87F832028BD79008ED1AA /* AddItemViewController.swift */,
+				7DD87F852028C04C008ED1AA /* AddItemPresenter.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -591,7 +612,6 @@
 			isa = PBXGroup;
 			children = (
 				7DD87F6A20275C60008ED1AA /* AddItemViewContract.swift */,
-				7DD87F7020275EE2008ED1AA /* AddItemRouterContract.swift */,
 			);
 			path = Contract;
 			sourceTree = "<group>";
@@ -611,6 +631,15 @@
 				7DD87F7C20278BF0008ED1AA /* AppListItemDetailViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7DD87F7E202795BF008ED1AA /* UpdateItemUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				7DD87F7F202795D7008ED1AA /* UpdateItemUseCase.swift */,
+				7DD87F81202795EC008ED1AA /* UpdateItemInteractor.swift */,
+			);
+			path = UpdateItemUseCase;
 			sourceTree = "<group>";
 		};
 		7DE4C69A20221B0500BB30EA /* Contracts */ = {
@@ -635,7 +664,6 @@
 			isa = PBXGroup;
 			children = (
 				7D507A742021044900C96E48 /* DetailViewContract.swift */,
-				7D7F01B5202504F200D51963 /* DetailRouterContract.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -964,19 +992,23 @@
 				7DE4C6B32022634800BB30EA /* ListRouter.swift in Sources */,
 				7D7F01E72025421F00D51963 /* SetOnboardingStatusInteractor.swift in Sources */,
 				7DE4C6AF20225F2800BB30EA /* GridViewController.swift in Sources */,
+				7DD87F842028BD79008ED1AA /* AddItemViewController.swift in Sources */,
 				7D507A7D202106F200C96E48 /* DetailModuleFactory.swift in Sources */,
+				7D89A9BB2028E60E00C04852 /* EmptyItemDescriptionError.swift in Sources */,
 				7D7F01DB2025347200D51963 /* FetchOnboardingStatusUseCase.swift in Sources */,
 				7DD87F5020267D34008ED1AA /* MemoryListItemDataSource.swift in Sources */,
 				7DE4C6B1202262B400BB30EA /* ListPresenter.swift in Sources */,
+				7DD87F80202795D7008ED1AA /* UpdateItemUseCase.swift in Sources */,
+				7DD87F82202795EC008ED1AA /* UpdateItemInteractor.swift in Sources */,
 				7D507A6F2020FEB700C96E48 /* ListViewContract.swift in Sources */,
 				7DE4C6A8202228DD00BB30EA /* RootRouter.swift in Sources */,
 				7D507A6B2020FD2300C96E48 /* OnboardingViewContract.swift in Sources */,
 				7D507A692020FD1000C96E48 /* OnboardingPresenter.swift in Sources */,
 				7D507A582020F80200C96E48 /* Constants.swift in Sources */,
+				7D89A9B92028E50D00C04852 /* ErrorViewModel.swift in Sources */,
 				7DD87F52202681F9008ED1AA /* FetchListInteractor.swift in Sources */,
 				7DD87F5D20268E8C008ED1AA /* ListViewModel.swift in Sources */,
 				7D7F01D620252B7300D51963 /* SaveItemUseCase.swift in Sources */,
-				7D7F01B6202504F200D51963 /* DetailRouterContract.swift in Sources */,
 				7D507A79202106B600C96E48 /* TabModuleFactory.swift in Sources */,
 				7DD87F5B20268C31008ED1AA /* FakeListData.swift in Sources */,
 				7DE4C6A42022239B00BB30EA /* RootViewContract.swift in Sources */,
@@ -989,13 +1021,13 @@
 				7DD87F4C20267AF8008ED1AA /* AppListItemModel.swift in Sources */,
 				7D7F01E4202541FE00D51963 /* SetOnboardingStatusUseCase.swift in Sources */,
 				7D7F01DD2025367200D51963 /* FetchOnboardingStatusInteractor.swift in Sources */,
+				7DD87F862028C04C008ED1AA /* AddItemPresenter.swift in Sources */,
 				7D7F01AC2024FB2500D51963 /* ListRouterContract.swift in Sources */,
 				7DD87F4E20267D27008ED1AA /* MemoryListDataSource.swift in Sources */,
 				7DD87F55202685AA008ED1AA /* DeleteItemInteractor.swift in Sources */,
 				7D7F01BD202521D300D51963 /* ListItemModel.swift in Sources */,
 				7D507A5E2020FB3700C96E48 /* OnboardingViewController.swift in Sources */,
 				7DD87F6B20275C60008ED1AA /* AddItemViewContract.swift in Sources */,
-				7DD87F7120275EE2008ED1AA /* AddItemRouterContract.swift in Sources */,
 				7DD87F5720268677008ED1AA /* SaveItemInteractor.swift in Sources */,
 				7D50D2A92024CBF1002FF60E /* ListCellView.swift in Sources */,
 				7D7F01DF20253F0F00D51963 /* KeyValueDataSource.swift in Sources */,

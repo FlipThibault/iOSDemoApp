@@ -75,10 +75,26 @@ class ListViewController : UIViewController {
 
 extension ListViewController: ListViewInput {
     
-    func populateViewWithData(listViewModel: ListViewModel) {
+    func populateViewWithData() {
         self.listView.reloadData()
     }
     
+    func showError(listViewErrorViewModel: ErrorViewModel) {
+        let errorAlert = UIAlertController(title: listViewErrorViewModel.getErrorTitle(), message: listViewErrorViewModel.getErrorMessage(), preferredStyle: .alert)
+        
+        let okAction: UIAlertAction = {
+            return UIAlertAction(title: NSLocalizedString("OK", comment: ""),
+                                 style: UIAlertActionStyle.cancel,
+                                 handler: { (action) in
+            })
+        }()
+        
+        errorAlert.addAction(okAction)
+        
+        self.present(errorAlert, animated: true, completion: {})
+        
+    }
+
     func setEditMode(isEditing: Bool) {
         listView.setEditing(isEditing, animated: true)
         if isEditing {
@@ -88,6 +104,24 @@ extension ListViewController: ListViewInput {
             editBtn.title = NSLocalizedString("action.navigation.edit", comment: "")
             navigationItem.rightBarButtonItems = [editBtn, addBtn]
         }
+    }
+    
+    func notifyItemUpdated(at indexPath: IndexPath) {
+        self.listView.beginUpdates()
+        self.listView.reloadRows(at: [indexPath], with: .fade)
+        self.listView.endUpdates()
+    }
+    
+    func notifyItemAdded(at indexPath: IndexPath) {
+        self.listView.beginUpdates()
+        self.listView.insertRows(at: [indexPath], with: .top)
+        self.listView.endUpdates()
+    }
+    
+    func notifyItemRemoved(at indexPath: IndexPath) {
+        self.listView.beginUpdates()
+        self.listView.deleteRows(at: [indexPath], with: .right)
+        self.listView.endUpdates()
     }
     
 }

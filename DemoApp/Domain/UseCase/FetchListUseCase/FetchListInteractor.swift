@@ -12,13 +12,10 @@ class FetchListInteractor: NSObject {
 
 extension FetchListInteractor: FetchListUseCase {
     
-    func fetchList(by id: String, with completion: (AppListModel) -> Void) {
+    func fetchList(by id: String, with completion: @escaping (AppListModel, NSError?) -> Void) {
         
-        dataSource.get(by: id) { (list) in
-            
-            list.items.reverse()
-            
-            completion(list)
+        dataSource.get(by: id) { (list, error) in
+            completion(list, nil)
         }
         
     }

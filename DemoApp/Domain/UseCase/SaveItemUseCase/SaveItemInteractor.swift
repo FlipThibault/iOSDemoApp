@@ -12,16 +12,44 @@ class SaveItemInteractor: NSObject {
 
 extension SaveItemInteractor: SaveItemUseCase {
     
-    func saveItem(item: AppListItemModel, to list: AppListModel, with completion: (AppListModel, NSError?) -> Void) {
-
-        list.items.insert(item, at: 0)
+    func saveItem(with description: String, to list: AppListModel, with completion: @escaping (AppListItemModel, NSError?) -> Void) {
         
-        dataSource.save(with: item) { (success) in
-            if(success) {
-                completion(list, nil)
-            } else {
-                completion(list, NSError(with: Constants.ErrorMessages.dataSourceSaveError))
+        let item = AppListItemModel()
+        item.description = description
+        
+        if(!item.description.isEmpty) {
+            
+            list.items.insert(item, at: 0)
+            
+            completion(item, nil)
+            
+            dataSource.save(with: item) { (error) in
+                if(error != nil) {
+                    completion(item, NSError(with: Constants.ErrorMessages.dataSourceSaveError))
+                }
             }
+        } else {
+            //this error message shouldn't be empty. Just for demo purposes
+            completion(item, NSError(with: ""))
+        }
+        
+    }
+    
+    func saveItem(item: AppListItemModel, to list: AppListModel, with completion: @escaping (AppListItemModel, NSError?) -> Void) {
+
+        if(!item.description.isEmpty) {
+            list.items.insert(item, at: 0)
+            
+            completion(item, nil)
+            
+            dataSource.save(with: item) { (error) in
+                if(error != nil) {
+                    completion(item, NSError(with: Constants.ErrorMessages.dataSourceSaveError))
+                }
+            }
+        } else {
+            //this error message shouldn't be empty. Just for demo purposes
+            completion(item, NSError(with: ""))
         }
         
     }

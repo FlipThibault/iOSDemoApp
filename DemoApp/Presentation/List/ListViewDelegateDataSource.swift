@@ -7,6 +7,7 @@ protocol ListViewDataProvider {
 
 protocol ListViewInteractionHandler {
     func onItemClick(at indexPath: IndexPath)
+    func onItemDelete(at indexPath: IndexPath)
 }
 
 class ListViewDelegateDataSource: NSObject {
@@ -52,6 +53,20 @@ extension ListViewDelegateDataSource : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         self.interactionHandler.onItemClick(at: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == .delete) {
+            self.interactionHandler.onItemDelete(at: indexPath)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 0
     }
     
 }

@@ -2,9 +2,14 @@ import Foundation
 
 protocol ListViewInput: NSObjectProtocol {
     
-    func populateViewWithData(listViewModel: ListViewModel)
+    func populateViewWithData()
     func setEditMode(isEditing: Bool)
+    func showError(listViewErrorViewModel: ErrorViewModel)
     
+    func notifyItemUpdated(at indexPath: IndexPath)
+    func notifyItemAdded(at indexPath: IndexPath)
+    func notifyItemRemoved(at indexPath: IndexPath)
+
 }
 
 protocol ListViewOutput: NSObjectProtocol {

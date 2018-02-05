@@ -6,15 +6,19 @@ class AppListItemModel {
     var description: String
     var dateCreated: Date
     var orderByDate: Date
-    var list: AppListModel
     
-    init(with list: AppListModel) {
+    init() {
         self.identifier = UUID.init().uuidString
         self.description = ""
         self.dateCreated = Date()
         self.orderByDate = Date()
-        self.list = list
     }
-    
+
 }
 
+extension AppListItemModel: Equatable {
+    static func == (lhs: AppListItemModel, rhs: AppListItemModel) -> Bool {
+        return
+            lhs.identifier == rhs.identifier
+    }
+}

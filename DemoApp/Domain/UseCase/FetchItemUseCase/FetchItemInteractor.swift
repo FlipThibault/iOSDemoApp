@@ -12,10 +12,12 @@ class FetchItemInteractor: NSObject {
 
 extension FetchItemInteractor: FetchItemUseCase {
 
-    func fetchItem(by identifier: String, from list: AppListModel, with completion: (AppListItemModel) -> Void) {
+    func fetchItem(by identifier: String, from list: AppListModel, with completion: @escaping (AppListItemModel, NSError?) -> Void) {
 
-        dataSource.get(by: identifier) { (item) in
-            completion(item)
+        dataSource.get(by: identifier) { (item, error) in
+            if error != nil {
+                completion(item, error)
+            }
         }
 
     }
