@@ -1,6 +1,6 @@
 import Foundation
 
-class EmptyItemDescriptionError {
+class EmptyItemDescriptionError: NSObject {
     
 }
 

@@ -14,7 +14,7 @@ extension UpdateItemInteractor: UpdateItemUseCase {
     
     func updateItem(item: AppListItemModel, in list: AppListModel, with completion: @escaping (AppListItemModel, NSError?) -> Void) {
         
-        if(!item.description.isEmpty) {
+        if(!item.descriptionText.isEmpty) {
             //assume no error at first and just pass back the item
             //this is considered a business rule thats why its in the Use Case implementation
             completion(item, nil)

@@ -1,6 +1,6 @@
 import Foundation
 
-protocol DetailViewModuleDelegate {
+@objc protocol DetailViewModuleDelegate: NSObjectProtocol {
     func notifyItemUpdated(item: AppListItemModel)
     func notifyItemUpdatedError(item: AppListItemModel, error: NSError?)
 }

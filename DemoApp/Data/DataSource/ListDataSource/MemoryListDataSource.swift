@@ -11,7 +11,7 @@ class MemoryListDataSource: NSObject {
         for value in fakeList.items {
             let item = AppListItemModel()
             item.identifier = value.identifier
-            item.description = value.description
+            item.descriptionText = value.descriptionText
             item.dateCreated = value.dateCreated
             item.orderByDate = value.orderByDate
             newList.items.append(item)

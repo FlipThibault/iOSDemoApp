@@ -15,6 +15,7 @@ class ListView : UITableView {
     
     private func initialize() {
         self.separatorStyle = .none
+        self.backgroundView = ListViewEmptyView(with: NSLocalizedString("list.empty.message", comment: ""))
     }
 
 }

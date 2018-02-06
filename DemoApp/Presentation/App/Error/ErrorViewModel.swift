@@ -1,6 +1,6 @@
 import Foundation
 
-protocol ErrorViewModel {
+@objc protocol ErrorViewModel: NSObjectProtocol {
     
     func getErrorTitle() -> String
     func getErrorMessage() -> String

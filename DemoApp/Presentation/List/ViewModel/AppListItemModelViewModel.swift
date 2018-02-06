@@ -1,6 +1,6 @@
 import Foundation
 
-class AppListItemModelViewModel {
+@objc class AppListItemModelViewModel: NSObject {
     
     var listItemModel: AppListItemModel
     
@@ -13,7 +13,7 @@ class AppListItemModelViewModel {
 extension AppListItemModelViewModel: ListItemViewModel {
     
     func getDisplayText() -> String {
-        return listItemModel.description
+        return listItemModel.descriptionText
     }
     
 }

@@ -1,22 +1,19 @@
 import Foundation
 
-class AppListItemModel {
+@objc class AppListItemModel: NSObject {
     
     var identifier: String
-    var description: String
+    var descriptionText: String
     var dateCreated: Date
     var orderByDate: Date
     
-    init() {
+    override init() {
         self.identifier = UUID.init().uuidString
-        self.description = ""
+        self.descriptionText = ""
         self.dateCreated = Date()
         self.orderByDate = Date()
     }
 
-}
-
-extension AppListItemModel: Equatable {
     static func == (lhs: AppListItemModel, rhs: AppListItemModel) -> Bool {
         return
             lhs.identifier == rhs.identifier

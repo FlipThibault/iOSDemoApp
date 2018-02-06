@@ -1,6 +1,6 @@
 import Foundation
 
-class AppListModelViewModel {
+@objc class AppListModelViewModel: NSObject {
 
     var list: AppListModel
     var items: [ListItemViewModel]

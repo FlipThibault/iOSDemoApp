@@ -1,6 +1,6 @@
 import Foundation
 
-protocol ListViewModel {
+@objc protocol ListViewModel: NSObjectProtocol {
     
     func isEditing() -> Bool
     func getDisplayName() -> String

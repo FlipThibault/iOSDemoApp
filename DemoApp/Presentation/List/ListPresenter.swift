@@ -29,7 +29,7 @@ extension ListPresenter: ListViewOutput {
         fetchListUseCase?.fetchList(by: "", with: { (appListModel, error) in
             self.listModel = appListModel
             self.updateViewModel()
-            if(self.listModel?.items.count == 0) {
+            if(appListModel.items.count == 0) {
                 self.view?.showEmptyView()
             } else {
                 self.view?.populateViewWithData()

@@ -1,11 +1,11 @@
 import Foundation
 import UIKit
 
-protocol ListViewDataProvider {
+@objc protocol ListViewDataProvider {
     func getData() -> ListViewModel?
 }
 
-protocol ListViewInteractionHandler {
+@objc protocol ListViewInteractionHandler {
     func onItemClick(at indexPath: IndexPath)
     func onItemDelete(at indexPath: IndexPath)
 }

@@ -11,7 +11,7 @@ let fakeList: AppListModel = {
     
     for index in lowerBounds...upperBounds {
         let item = AppListItemModel()
-        item.description = String(index)
+        item.descriptionText = String(index)
 //        testList.items.append(item)
     }
     

@@ -1,6 +1,6 @@
 import Foundation
 
-class AppListModel {
+@objc class AppListModel: NSObject {
     
     var identifier: String
     var name: String
@@ -16,5 +16,9 @@ class AppListModel {
         self.items = []
     }
     
+    static func == (lhs: AppListModel, rhs: AppListModel) -> Bool {
+        return
+            lhs.identifier == rhs.identifier
+    }
 }
 

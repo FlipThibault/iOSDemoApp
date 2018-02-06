@@ -1,10 +1,10 @@
 import Foundation
 
-protocol OnboardingViewInput {
+@objc protocol OnboardingViewInput: NSObjectProtocol {
     
 }
 
-protocol OnboardingViewOutput {
+@objc protocol OnboardingViewOutput: NSObjectProtocol {
     func didClickNext()
 }
 

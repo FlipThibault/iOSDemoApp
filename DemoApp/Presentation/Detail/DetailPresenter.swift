@@ -13,7 +13,7 @@ class DetailPresenter : NSObject {
     init(with item: AppListItemModel, and list: AppListModel) {
         self.listItem = item
         self.list = list
-        self.initialText = listItem.description
+        self.initialText = listItem.descriptionText
         self.viewModel = AppListItemDetailViewModel(with: listItem)
     }
     
@@ -26,11 +26,11 @@ extension DetailPresenter : DetailViewOutput {
     }
     
     func updateText(text: String) {
-        self.listItem.description = text
+        self.listItem.descriptionText = text
     }
     
     func isDismissing() {
-        if self.initialText != self.listItem.description {
+        if self.initialText != self.listItem.descriptionText {
             self.updateItemUseCase?.updateItem(item: self.listItem, in: self.list, with: { (appListModel, error) in
 
                 if let err = error {

@@ -13,7 +13,7 @@ class AppListItemDetailViewModel {
 extension AppListItemDetailViewModel: DetailViewModel {
     
     func getText() -> String {
-        return self.listItem.description
+        return self.listItem.descriptionText
     }
     
 }

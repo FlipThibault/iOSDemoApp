@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-protocol AddItemViewModuleDelegate {
+@objc protocol AddItemViewModuleDelegate: NSObjectProtocol {
     func notifyItemAdded(item: AppListItemModel)
     func notifyItemAddedError(item: AppListItemModel, error: NSError?)
 }

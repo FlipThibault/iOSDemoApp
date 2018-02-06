@@ -15,9 +15,9 @@ extension SaveItemInteractor: SaveItemUseCase {
     func saveItem(with description: String, to list: AppListModel, with completion: @escaping (AppListItemModel, NSError?) -> Void) {
         
         let item = AppListItemModel()
-        item.description = description
+        item.descriptionText = description
         
-        if(!item.description.isEmpty) {
+        if(!item.descriptionText.isEmpty) {
             
             list.items.insert(item, at: 0)
             
@@ -37,7 +37,7 @@ extension SaveItemInteractor: SaveItemUseCase {
     
     func saveItem(item: AppListItemModel, to list: AppListModel, with completion: @escaping (AppListItemModel, NSError?) -> Void) {
 
-        if(!item.description.isEmpty) {
+        if(!item.descriptionText.isEmpty) {
             list.items.insert(item, at: 0)
             
             completion(item, nil)

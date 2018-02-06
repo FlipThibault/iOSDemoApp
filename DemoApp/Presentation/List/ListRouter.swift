@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class ListRouter {
+class ListRouter: NSObject {
     
     weak var vc : UIViewController?
     

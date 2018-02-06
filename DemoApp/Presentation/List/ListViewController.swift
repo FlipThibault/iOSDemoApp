@@ -29,10 +29,9 @@ class ListViewController : UIViewController {
     private func setupTableView() {
         self.listView.dataSource = delegateDataSource
         self.listView.delegate = delegateDataSource
+        
         self.view.addSubview(listView)
         
-        self.listView.backgroundView = ListViewEmptyView(with: NSLocalizedString("list.empty.message", comment: ""))
-
         listView.register(ListCellView.self, forCellReuseIdentifier: Constants.TableViewCellIdentifier.listCellView)
     }
     
