@@ -127,10 +127,47 @@ class ListPresentertests: XCTestCase {
         XCTAssert(router.goToDetailCalled)
     }
     
+    func testOnItemDeleteCallsDeleteItem() {
+        fetchListUseCase.mockListModel.items = [AppListItemModel()]
+        presenter.isLoaded()
+        presenter.onItemDelete(at: IndexPath(row: 0, section: 0))
+        XCTAssert(deleteItemUseCase.deleteItemCalled)
+    }
+    
+    func testViewNotifItemRemovedCalledWhenDeleteItem() {
+        fetchListUseCase.mockListModel.items = [AppListItemModel()]
+        presenter.isLoaded()
+        presenter.onItemDelete(at: IndexPath(row: 0, section: 0))
+        
+        XCTAssert(self.view.notifyItemRemovedCalled)
+    }
+    
+//    func testIsEmptySetWhenRemovingLastItem() {
+//        fetchListUseCase.mockListModel.items = [AppListItemModel()]
+//        presenter.isLoaded()
+//        presenter.onItemDelete(at: IndexPath(row: 0, section: 0))
+//        
+//        XCTAssert(self.view.showEmptyViewCalled)
+//    }
+//    
+//    func testViewNotSetToEmptyWhenItemsRemainAfterRemovingOne() {
+//        fetchListUseCase.mockListModel.items = [AppListItemModel(), AppListItemModel()]
+//        presenter.isLoaded()
+//        presenter.onItemDelete(at: IndexPath(row: 0, section: 0))
+//        
+//        XCTAssert(self.view.showEmptyViewCalled)
+//    }
+//    
     class MockDeleteItemInteractor: NSObject, DeleteItemUseCase {
         
+        var deleteItemCalled = false
+
         func deleteItem(item: AppListItemModel, from list: AppListModel, with completion: @escaping (AppListItemModel, NSError?) -> Void) {
+            deleteItemCalled = true
             
+            let mockListItemModel = AppListItemModel()
+
+            completion(mockListItemModel, nil)
         }
         
     }
@@ -139,10 +176,16 @@ class ListPresentertests: XCTestCase {
         
         func saveItem(with description: String, to list: AppListModel, with completion: @escaping (AppListItemModel, NSError?) -> Void) {
             
+            let mockListItemModel = AppListItemModel()
+
+            completion(mockListItemModel, nil)
         }
         
         func saveItem(item: AppListItemModel, to list: AppListModel, with completion: @escaping (AppListItemModel, NSError?) -> Void) {
             
+            let mockListItemModel = AppListItemModel()
+
+            completion(mockListItemModel, nil)
         }
         
     }
@@ -153,6 +196,10 @@ class ListPresentertests: XCTestCase {
         var populateViewWithDataCalled = false
         var hideEmptyViewCalled = false
         var setEditModeCalled = false
+        var showErrorCalled = false
+        var notifyItemUpdatedCalled = false
+        var notifyItemAddedCalled = false
+        var notifyItemRemovedCalled = false
         
         func populateViewWithData() {
             populateViewWithDataCalled = true
@@ -163,7 +210,7 @@ class ListPresentertests: XCTestCase {
         }
         
         func showError(listViewErrorViewModel: ErrorViewModel) {
-            
+            showErrorCalled = true
         }
         
         func showEmptyView() {
@@ -175,15 +222,15 @@ class ListPresentertests: XCTestCase {
         }
         
         func notifyItemUpdated(at indexPath: IndexPath) {
-            
+            notifyItemUpdatedCalled = true
         }
         
         func notifyItemAdded(at indexPath: IndexPath) {
-            
+            notifyItemAddedCalled = true
         }
         
         func notifyItemRemoved(at indexPath: IndexPath) {
-            
+            notifyItemRemovedCalled = true
         }
         
     }

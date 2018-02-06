@@ -31,11 +31,11 @@ extension MemoryListDataSource: ListDataSource {
         completion(newList, nil)
     }
     
-    func save(with item: AppListModel, with completion: @escaping (NSError?) -> Void) {
+    func save(with item: AppListModel, with completion: @escaping (AppListModel, NSError?) -> Void) {
         NSLog("Not implemented")
     }
     
-    func delete(by identifier: String, with completion: @escaping (NSError?) -> Void) {
+    func delete(by identifier: String, with completion: @escaping (AppListModel, NSError?) -> Void) {
         NSLog("Not implemented")
     }
     
